@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
+{{$author := index .Site.Author .Params.author}}
 <article>
   <header>
     <h1 class="text-primary">{{ .Title }}</h1>
@@ -42,19 +43,19 @@
     {{ end }}
     <section class="author-info row">
       <div class="author-avatar col-md-2">
-        {{ with .Site.Params.avatar }}
+        {{ with $author.avatar }}
         <img alt="Author Avatar" src="{{ . }}" />
         {{ end }}
       </div>
       <div class="author-meta col-md-6">
-        {{ with .Site.Params.author }}
+        {{ with $author.name }}
         <h1 class="author-name text-primary">{{ . }}</h1>
         {{ end }}
-        {{ with .Site.Params.bio }}
+        {{ with $author.bio }}
         <div class="author-bio">{{ . }}</div>
         {{ end }}
       </div>
-      {{ with .Site.Params.contact }}
+      {{ with $author.contact }}
       <div class="author-contact col-md-4">
         <a href="{{ . }}">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
