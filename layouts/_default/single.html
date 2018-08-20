@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
-{{$author := index .Site.Author .Params.author}}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $author := index $data.authors .Params.author }}
 <article>
   <header>
     <h1 class="text-primary">{{ .Title }}</h1>
