@@ -92,6 +92,29 @@ a.btn-back {
     left: 20px;
 }
 
+/* Navbar */
+
+.navbar-container {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    /* right: 20px; */
+    bottom: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-item {
+    margin-left: 20px;
+    position: initial !important;
+
+}
+
+.navbar-item:last-child {
+    margin-left: 0px;
+}
+
+
 /* Footer */
 
 .global-footer {
