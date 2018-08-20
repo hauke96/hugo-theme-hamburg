@@ -1,6 +1,11 @@
-author = "Keichi Takahashi"
+author = "Hauke Stieler"
+name = "hamburg"
 description = "Simple and clean blog theme for hugo"
 license = "MIT"
+tags = ["blog", "tags", "bootstrap"]
+source_repo = "git@github.com:hauke96/hugo-theme-hamburg.git"
+
+[original]
+author = "Keichi Takahashi"
 name = "vienna"
 source_repo = "git@github.com:keichi/vienna.git"
-tags = ["blog", "tags", "bootstrap"]
