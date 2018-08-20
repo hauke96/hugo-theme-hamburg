@@ -244,30 +244,30 @@ a.btn-back {
 
 .pagination
 {
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .older-posts,.newer-posts
 {
-	display: inline!important;
-	border: 1px solid #ddd;
-	border-radius: 15px;
-	text-decoration: none;
-	transition: border .3s ease;
-	padding: 5px 14px;
+    display: inline!important;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: border .3s ease;
+    padding: 5px 14px;
 }
 
 .page-number
 {
-	display: inline-block;
-	min-width: 100px;
-	padding: 2px 0;
+    display: inline-block;
+    min-width: 100px;
+    padding: 2px 0;
 }
 
 .newer-posts
 {
-	float: left;
+    float: left;
 }
 
 .older-posts
@@ -277,8 +277,8 @@ a.btn-back {
 
 .older-posts:hover,.newer-posts:hover
 {
-	color: #889093;
-	border-color: #98a0a4;
+    color: #889093;
+    border-color: #98a0a4;
 }
 
 /* Override some of Bootstrap's styles */
