@@ -6,15 +6,17 @@ main {
 /* Header */
 
 .global-header {
-    background: #222 no-repeat center center;
+    background: #222 no-repeat center top;
     background-size: cover;
+    min-height: 350px;
 }
 
 .header-text {
     position: relative;
     padding-bottom: 1px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    min-height: inherit;
+    background-color: rgba(0, 0, 0, 0.3);
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -24,7 +26,7 @@ main {
     max-width: 430px;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .header-text .sns-links {
@@ -41,7 +43,7 @@ main {
     border-radius: 15px;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-    font-size: 20px;
+    font-size: inherit;
     line-height: 30px;
     transition: color,border-color 0.1s linear;
 }
@@ -72,7 +74,7 @@ a.btn-header {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(255, 255, 255, 1.0);
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 13px;
     transition: color,background-color 0.1s linear;
 }
@@ -187,7 +189,6 @@ a.btn-back {
     max-height: 100px;
     width: 100px;
     height: 100px;
-    border-radius: 50px;
 }
 
 .author-contact {
