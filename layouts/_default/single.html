@@ -1,7 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
-{{ $author := index $data.authors .Params.author }}
 <article>
   <header>
     <h1 class="text-primary">{{ .Title }}</h1>
@@ -42,6 +41,8 @@
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {{ end }}
     {{ end }}
+    {{ if (isset .Params "author")  }}
+    {{ $author := index $data.authors .Params.author }}
     <section class="author-info row">
       <div class="author-avatar col-md-2">
         {{ with $author.avatar }}
@@ -63,6 +64,7 @@
           &nbsp;Contact me
         </a>
       </div>
+      {{ end }}
       {{ end }}
     </section>
     <ul class="pager">
