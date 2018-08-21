@@ -63,7 +63,7 @@
       <!-- sites -->
       <div class="navbar-container">
         {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}" class="btn-header navbar-item">
+          <a href="{{ .URL | absLangURL | safeURL }}" class="btn-header navbar-item">
           {{ .Name }}
           </a>
         {{ end }}
