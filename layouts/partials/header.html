@@ -48,14 +48,14 @@
 <body>
     <header class="global-header"  style="background-image:url({{ if isset .Params "image" }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})">
     <section class="header-text">
-      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+      <h1><a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
       <div class="tag-line">
         {{ . }}
       </div>
       {{ end }}
       {{ if ne .URL "/" }}
-      <a href="{{ .Site.BaseURL }}" class="btn-header btn-back">
+      <a href="{{ "/" | absLangURL }}" class="btn-header btn-back">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
