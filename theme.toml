@@ -2,7 +2,7 @@ author = "Hauke Stieler"
 name = "hamburg"
 description = "Simple and clean blog theme for hugo"
 license = "MIT"
-tags = ["blog", "tags", "bootstrap"]
+tags = ["blog", "tags", "bootstrap", "multilingual", "clean", "minimal", "disqus", "font awesome", "mobile"]
 source_repo = "git@github.com:hauke96/hugo-theme-hamburg.git"
 
 [original]
