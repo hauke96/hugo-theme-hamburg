@@ -1,0 +1,16 @@
+[pageNotExists]
+  other = "That page doesn't exist!"
+[home]
+  other = "Home"
+[newerPosts]
+  other = "Newer Posts"
+[olderPosts]
+  other = "Older Posts"
+[pageOf]
+  other = "Page {{ .PageNumber }} of {{.TotalPages}}"
+[postedOn]
+  other = "Posted on"
+[readMore]
+  other = "Read more"
+[contactMe]
+  other = "Contact me"
