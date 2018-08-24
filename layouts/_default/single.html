@@ -9,12 +9,14 @@
   <section>
     {{ .Content }}
   </section>
-  <div class="post-meta clearfix">
+  <div class="clearfix">
     {{ if (isset .Params "noshowdate")  }}
     {{ else }}
       <div class="post-date pull-left">
-        {{ i18n "postedOn" }}
-        {{ .Date.Format ( i18n "dateformat" ) }}
+        <span class="small">
+          {{ i18n "postedOn" }}
+          {{ .Date.Format ( i18n "dateformat" ) }}
+        </span>
       </div>
     {{ end }}
     <div class="pull-right">
