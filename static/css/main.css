@@ -324,3 +324,7 @@ article section img {
       -ms-user-select: none;
     transition: color, background-color 0.1s linear;
 }
+
+.pager li > a, .pager li > span {
+    border-radius: 3px;
+}
