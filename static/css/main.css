@@ -115,7 +115,6 @@ a.btn-back {
     margin-left: 0px;
 }
 
-
 /* Footer */
 
 .global-footer {
@@ -294,13 +293,14 @@ article section img {
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
-    transition: color, background-color 0.1s linear;
 }
 
 .pager li > a, .pager li > span {
     border-radius: 3px;
 }
 
-.pager li > a {
+.btn:hover, .btn-primary:hover, .btn-default:hover, .pager li > a {
+    -webkit-transition: background-color 0.1s linear;
+    -ms-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear;
 }

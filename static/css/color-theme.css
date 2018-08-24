@@ -26,8 +26,36 @@ a:hover {
     color: #bdbdbd;
 }
 
+.pager li > a:hover,
+.pager li > span:hover {
+    border-color: #558b2f;
+    background-color: transparent;
+}
+
+.btn-primary,
+.pager li > a {
+    background-color: transparent;
+    border-color: #ccc;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #fff;
+    border-color: #558b2f;
+}
+
 .btn-default {
   color: #fff;
-  background-color: #00000000;
-  border-color: #ccc;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-default > a {
+  color: #fff;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #bdbdbd4c;
+  border-color: #fff;
 }
