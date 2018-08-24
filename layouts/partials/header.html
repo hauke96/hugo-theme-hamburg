@@ -46,7 +46,7 @@
   {{ end }}
 </head>
 <body>
-    <header class="global-header"  style="background-image:url({{ if isset .Params "image" }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})">
+  <header class="global-header"  style="background-image:url({{ if isset .Params "image" }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})">
     <section class="header-text">
       <h1><a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
@@ -68,6 +68,18 @@
           </a>
         {{ end }}
       </div>
+      <!-- Languages -->
+      {{ $url := urls.Parse .Permalink }}
+      {{ $path := strings.TrimPrefix (print "/" .Language "/") $url.Path }}
+      {{ if .IsTranslated }}
+      <div class="language-container">
+        {{ range .Site.Home.AllTranslations }}
+          <div class="btn btn-default language-button">
+            <a href="{{ .URL }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
     </section>
   </header>
   <main class="container">

@@ -114,6 +114,21 @@ a.btn-back {
     margin-left: 0px;
 }
 
+/* Language list */
+
+.language-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-button {
+    margin-left: 5px;
+    position: initial !important;
+}
 
 /* Footer */
 
@@ -310,4 +325,3 @@ article section img {
     height: auto;
     margin: 13px auto;
 }
-
