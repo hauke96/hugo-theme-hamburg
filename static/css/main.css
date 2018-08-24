@@ -276,6 +276,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Source Sans Pro", "Kozuka Gothic Pr6N", Meiryo, sans-serif !important;
 }
 
+.btn > a:hover {
+  text-decoration: none;
+}
+
 article section img {
     max-width: 100%;
     height: auto;
