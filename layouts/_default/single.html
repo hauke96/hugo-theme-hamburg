@@ -2,7 +2,7 @@
 {{ $baseurl := .Site.BaseURL }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <article>
-  <header>
+  <header class="article-title">
     <h1 class="text-primary">{{ .Title }}</h1>
     <div class="post-meta clearfix">
     {{ if (isset .Params "noshowdate")  }}
