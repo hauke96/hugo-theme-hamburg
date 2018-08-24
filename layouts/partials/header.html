@@ -30,9 +30,10 @@
   </title>
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github.css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/color-theme.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
   <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/apple-touch-icon.png" />
@@ -55,7 +56,7 @@
       </div>
       {{ end }}
       {{ if ne ( trim .URL "/" ) .Site.Language.Lang }}
-      <a href="{{ "/" | absLangURL }}" class="btn-header btn-back">
+      <a href="{{ "/" | absLangURL }}" class="btn btn-default btn-back">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;{{ i18n "home" }}
       </a>
@@ -63,9 +64,11 @@
       <!-- sites -->
       <div class="navbar-container">
         {{ range .Site.Menus.main }}
-          <a href="{{ .URL | absLangURL | safeURL }}" class="btn-header navbar-item">
-          {{ .Name }}
-          </a>
+          <div class="btn btn-default navbar-item">
+            <a href="{{ .URL | absLangURL | safeURL }}">
+              {{ .Name }}
+            </a>
+          </div>
         {{ end }}
       </div>
       <!-- Languages -->

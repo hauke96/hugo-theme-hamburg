@@ -89,7 +89,9 @@ a.btn-subscribe {
 }
 
 a.btn-back {
+    position: absolute;
     left: 20px;
+    top: 20px;
 }
 
 /* Navbar */
@@ -107,7 +109,6 @@ a.btn-back {
 .navbar-item {
     margin-left: 20px;
     position: initial !important;
-
 }
 
 .navbar-item:last-child {
@@ -133,11 +134,9 @@ a.btn-back {
 /* Footer */
 
 .global-footer {
-    margin-top: 10px;
     padding-top: 10px;
     max-width: 750px;
     height: 100px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -209,8 +208,7 @@ a.btn-back {
 
 .author-info {
     padding: 25px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: auto;
 }
 
 .author-name {
@@ -230,29 +228,7 @@ a.btn-back {
 }
 
 .author-contact {
-    position: relative;
-    display: inline-block;
-    padding-top: 10px;
-    height: 100px;
-    text-align: center;
-}
-
-.author-contact a {
-    display: inline-block;
-    padding: 7px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    color: rgba(0, 0, 0, 0.7);
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 13px;
-    transition: background-color,border-color,color 0.1s linear;
-}
-
-.author-contact a:hover {
-    border: 1px solid rgba(51, 122, 182, 1.0);
-    background-color: rgba(51, 122, 183, 1.0);
-    color: rgba(255, 255, 255, 1.0);
+    margin-top: 10px;
 }
 
 /* Pagination */
@@ -296,20 +272,16 @@ a.btn-back {
     border-color: #98a0a4;
 }
 
-/* Override some of Bootstrap's styles */
+/* Bootstrap adjustions */
 
 pre {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 pre code {
     overflow: auto;
     white-space: pre;
     word-wrap: normal;
-}
-
-.pager li>a {
-    transition: background-color 0.1s linear;
 }
 
 blockquote {
@@ -324,4 +296,45 @@ article section img {
     max-width: 100%;
     height: auto;
     margin: 13px auto;
+}
+
+.btn {
+    border: 1px solid transparent;
+    font-size: 13px;
+    line-height: 1.58823529;
+    border-radius: 3px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.btn:hover, .btn-primary:hover, .btn-default:hover {
+    -webkit-transition: background-color 0.1s linear;
+    -ms-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;
+}
+
+.btn-older-posts {
+    float: left;
+}
+
+.btn-newer-posts {
+    float: right;
+}
+
+/*
+Paging at the bottom
+
+I don't use the default pager-class because I want to use the normal buttons with my style
+*/
+.pager-container {
+    overflow: auto;
+}
+
+.delimiter {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

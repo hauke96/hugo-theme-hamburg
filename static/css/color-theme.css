@@ -1,0 +1,61 @@
+/*
+From material design color palette:
+
+#f1f8e9 - Light Green  50
+#558b2f - Light Green 800
+#33691e - Light Green 900
+
+#bdbdbd - Gray 400
+#616161 - Gray 700
+*/
+
+.text-primary, a {
+    color: #558b2f;
+}
+
+a:hover {
+    color: #33691e;
+}
+
+.global-footer .sns-links a:hover {
+    border: 1px solid #33691e;
+    color: #33691e;
+}
+
+.post-tag a:hover {
+    background-color: #f1f8e9;
+    color: #bdbdbd;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border-color: #ccc;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #fff;
+    border-color: #558b2f;
+}
+
+.btn-primary.disabled, .btn-primary.disabled > a {
+    color: #616161;
+    background-color: #fff;
+    border-color: #bdbdbd;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-default > a {
+  color: #fff;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #bdbdbd4c;
+  border-color: #fff;
+}
