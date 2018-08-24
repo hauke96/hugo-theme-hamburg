@@ -13,15 +13,12 @@ main {
 .header-text {
     position: relative;
     min-height: inherit;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
 }
 
 .header-text .tag-line {
     margin: 25px auto;
     padding: 0 10px;
     max-width: 430px;
-    color: #fff;
     text-align: center;
     font-weight: 200;
 }
@@ -38,7 +35,6 @@ main {
 }
 
 .header-text h1 a {
-    color: rgba(255, 255, 255, 1.0);
     text-decoration: none;
 }
 
@@ -91,7 +87,6 @@ a.btn-home {
     padding-top: 10px;
     max-width: 750px;
     height: 100px;
-    color: rgba(0, 0, 0, 0.4);
 }
 
 .global-footer .sns-links {
@@ -102,9 +97,7 @@ a.btn-home {
     display: inline-block;
     width: 24px;
     height: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 12px;
-    color: rgba(0, 0, 0, 0.4);
     vertical-align: top;
     text-align: center;
     text-decoration: none;
@@ -114,11 +107,6 @@ a.btn-home {
 
 .global-footer .sns-links a i {
     vertical-align: middle;
-}
-
-.global-footer .sns-links a:hover {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    color: rgba(0, 0, 0, 0.7);
 }
 
 /* Article */
@@ -140,26 +128,14 @@ a.btn-home {
     text-align: center;
 }
 
-.post-date {
-    color: rgba(0, 0, 0, 0.4);
-}
-
 .post-tag a {
     padding: 0 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 12px;
-    color: rgba(0, 0, 0, 0.3);
     text-decoration: none;
     transition: color,border-color,background-color 0.1s linear;
 }
 
-.post-tag a:hover {
-    background-color: rgba(0, 0, 0, 1.0);
-    color: rgba(255, 255, 255, 1.0);
-}
-
 .not-found h1 {
-    color: rgba(0, 0, 0, 0.2);
     font-weight: 200;
     font-size: 80px;
 }
@@ -174,10 +150,6 @@ a.btn-home {
 
 .author-name {
     margin: 0 0 5px 0;
-}
-
-.author-bio {
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .author-avatar img {
@@ -199,37 +171,29 @@ a.btn-home {
     text-align: center;
 }
 
-.older-posts,.newer-posts
-{
+.older-posts,.newer-posts {
     display: inline!important;
-    border: 1px solid #ddd;
     border-radius: 15px;
     text-decoration: none;
     transition: border .3s ease;
     padding: 5px 14px;
 }
 
-.page-number
-{
+.page-number {
     display: inline-block;
     min-width: 100px;
     padding: 2px 0;
 }
 
-.newer-posts
-{
+/*
+TODO Remove older-posts and newer-posts, when the "pagination.html" also uses the btn-classes
+*/
+.newer-posts {
     float: left;
 }
 
-.older-posts
-{
+.older-posts {
     float: right;
-}
-
-.older-posts:hover,.newer-posts:hover
-{
-    color: #889093;
-    border-color: #98a0a4;
 }
 
 /* Article list */
@@ -304,7 +268,6 @@ article section img {
 }
 
 .btn {
-    border: 1px solid transparent;
     font-size: 13px;
     line-height: 1.58823529;
     border-radius: 3px;
@@ -341,5 +304,4 @@ I don't use the default pager-class because I want to use the normal buttons wit
     margin-right: -20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

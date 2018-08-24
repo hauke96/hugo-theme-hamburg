@@ -7,8 +7,51 @@ From material design color palette:
 
 #bdbdbd - Gray 400
 #616161 - Gray 700
-*/
 
+#000000 - Black
+
+...1B - 10% transparent
+...4D - 30% transparent
+...80 - 50% transparent
+*/
+.delimiter{
+    border-bottom: 1px solid #0000001B;
+}
+
+.header-text {
+    background-color: #0000004d;
+    color: #fff;
+}
+
+.header-text .tag-line {
+    color: #fff;
+}
+
+.header-text h1 a {
+    color: #fff;
+}
+
+/* The social-icons */
+.global-footer .sns-links a {
+    border: 1px solid #0000004d;
+    color: #0000004d;
+}
+
+.global-footer .sns-links a:hover {
+    border: 1px solid #33691e;
+    color: #33691e;
+}
+
+/* The whole footer-area */
+.global-footer {
+    color: #0000004d;
+}
+
+.post-date {
+    color: #0000004d;
+}
+
+/* Color for e.g. headers and links */
 .text-primary, a {
     color: #558b2f;
 }
@@ -17,9 +60,10 @@ a:hover {
     color: #33691e;
 }
 
-.global-footer .sns-links a:hover {
-    border: 1px solid #33691e;
-    color: #33691e;
+/* Tags of articles and pages */
+.post-tag a {
+  border: 1px solid #0000004d;
+  color: #0000004d;
 }
 
 .post-tag a:hover {
@@ -27,6 +71,31 @@ a:hover {
     color: #bdbdbd;
 }
 
+.not-found h1 {
+    color: #0000004d;
+}
+
+.author-bio {
+    color: #00000080;
+}
+
+/*
+TODO Remove older-posts and newer-posts, when the "pagination.html" also uses the btn-classes
+*/
+.older-posts, .newer-posts {
+    border: 1px solid #bdbdbd;
+}
+
+.older-posts:hover, .newer-posts:hover {
+    color: #889093;
+    border-color: #98a0a4;
+}
+
+.btn {
+    border: 1px solid transparent;
+}
+
+/* Primary buttons are the ones in the page (not in the header) */
 .btn-primary {
     background-color: transparent;
     border-color: #ccc;
@@ -44,6 +113,7 @@ a:hover {
     border-color: #bdbdbd;
 }
 
+/* Default buttons are the ones in the header */
 .btn-default {
   color: #fff;
   background-color: transparent;
@@ -55,7 +125,7 @@ a:hover {
 }
 
 .btn-default:hover {
-  color: #fff;
-  background-color: #bdbdbd4c;
-  border-color: #fff;
+    color: #fff;
+    background-color: #bdbdbd4d;
+    border-color: #fff;
 }
