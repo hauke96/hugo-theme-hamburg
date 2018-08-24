@@ -280,6 +280,18 @@ a.btn-back {
     border-color: #98a0a4;
 }
 
+/* Article list */
+
+.li-h1 {
+    margin-bottom: 2px;
+}
+
+.li-small {
+    font-size: 70%;
+    margin-top: 3px;
+    margin-bottom: 6px;
+}
+
 /* Bootstrap adjustions */
 
 h1,

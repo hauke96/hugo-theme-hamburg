@@ -1,9 +1,9 @@
 <article>
   <header>
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <h1 class="li-h1"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
     <div class="clearfix">
       <div class="post-date pull-left">
-        <span class="small">
+        <span class="li-small">
           {{ i18n "postedOn" }}
           {{ .Date.Format ( i18n "dateformat" ) }}
         </span>
