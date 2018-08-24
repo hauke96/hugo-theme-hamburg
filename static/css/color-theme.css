@@ -25,3 +25,9 @@ a:hover {
     background-color: #f1f8e9;
     color: #bdbdbd;
 }
+
+.btn-default {
+  color: #fff;
+  background-color: #00000000;
+  border-color: #ccc;
+}

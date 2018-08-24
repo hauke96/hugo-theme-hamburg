@@ -310,3 +310,16 @@ article section img {
     height: auto;
     margin: 13px auto;
 }
+
+/* Bootstrap adjustions */
+
+.btn {
+    border: 1px solid transparent;
+    font-size: 13px;
+    line-height: 1.58823529;
+    border-radius: 3px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    transition: color, background-color 0.1s linear;
+}
