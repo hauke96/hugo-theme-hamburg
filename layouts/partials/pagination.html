@@ -1,12 +1,34 @@
-<nav class="pagination" role="navigation">
 {{ if or .HasPrev .HasNext }}
   <div class="delimiter"></div>
+  <nav class="pagination" role="navigation">
+    {{ if .HasNext }}
+      <a class="btn btn-primary btn-older-posts" href="{{ .Next.URL }}">
+        <div>
+          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+        </div>
+      </a>
+    {{ else }}
+      <a class="btn btn-primary btn-older-posts disable" href="#">
+        <div>
+          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+        </div>
+      </a>
+    {{ end }}
+    <div>
+      <span>{{ i18n "pageOf" . }}</span>
+    </div>
+    {{ if .HasPrev }}
+      <a class="btn btn-primary btn-newer-posts" href="{{ .Next.URL }}">
+        <div>
+          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
+    {{ else }}
+      <a class="btn btn-primary btn-newer-posts disable" href="#">
+        <div>
+          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
+    {{ end }}
+  </nav>
 {{ end }}
-{{if .HasPrev}}
-  <a class="newer-posts" href="{{ .Prev.URL }}"><span aria-hidden="true">&laquo;</span> {{ i18n "newerPosts" }}</a>
-{{end}}
-  <span class="page-number">{{ i18n "pageOn" }}</span>
-{{if .HasNext}}
-<a class="older-posts" href="{{ .Next.URL }}">{{ i18n "olderPosts" }} <span aria-hidden="true">&raquo;</span></a>
-{{end}}
-</nav>

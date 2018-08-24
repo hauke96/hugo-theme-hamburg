@@ -2,27 +2,29 @@
 {{ $baseurl := .Site.BaseURL }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <article>
-  <header>
+  <header class="article-title">
     <h1 class="text-primary">{{ .Title }}</h1>
-    <div class="post-meta clearfix">
-    {{ if (isset .Params "noshowdate")  }}
-    {{ else }}
-      <div class="post-date pull-left">
-        {{ i18n "postedOn" }}
-        {{ .Date.Format ( i18n "dateformat" ) }}
-      </div>
-    {{ end }}
-      <div class="pull-right">
-        {{ range .Params.tags }}
-        <span class="post-tag small"><a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a></span>
-        {{ end }}
-      </div>
-    </div>
   </header>
   <div class="delimiter"></div>
   <section>
     {{ .Content }}
   </section>
+  <div class="clearfix">
+    {{ if (isset .Params "noshowdate")  }}
+    {{ else }}
+      <div class="post-date pull-left">
+        <span class="small">
+          {{ i18n "postedOn" }}
+          {{ .Date.Format ( i18n "dateformat" ) }}
+        </span>
+      </div>
+    {{ end }}
+    <div class="pull-right">
+      {{ range .Params.tags }}
+        <span class="post-tag small"><a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a></span>
+      {{ end }}
+    </div>
+  </div>
   <footer>
     {{ if (isset .Params "nocomments")  }}
     {{ else }}
@@ -44,25 +46,25 @@
     {{ $author := index $data.authors .Params.author }}
     <div class="delimiter"></div>
     <section class="author-info">
-      <div class="author-avatar col-md-4">
+      <div class="author-avatar col-md-2">
         {{ with $author.avatar }}
         <img alt="Author Avatar" src="{{ . }}" />
         {{ end }}
       </div>
-      <div class="author-meta col-md-8">
+      <div class="author-meta col-md-10">
         {{ with $author.name }}
-        <h1 class="author-name text-primary">{{ . }}</h1>
+          <h2 class="author-name text-primary">{{ . }}</h2>
         {{ end }}
         {{ with $author.bio }}
-        <div class="author-bio">{{ . }}</div>
+          <div class="author-bio">{{ . }}</div>
         {{ end }}
         {{ with $author.contact }}
-        <div class="btn btn-primary author-contact">
-            <a href="{{ . }}">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                &nbsp;{{ i18n "contactMe" }}
-            </a>
-        </div>
+          <a class="btn btn-primary author-contact" href="{{ . }}">
+            <div>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              &nbsp;{{ i18n "contactMe" }}
+            </div>
+          </a>
         {{ end }}
       </div>
       {{ end }}
@@ -70,30 +72,30 @@
     <div class="delimiter"></div>
     <div class="pager-container">
       {{ if .Next }}
-        <div class="btn btn-primary btn-older-posts">
-          <a href="{{ .Next.Permalink }}">
+        <a class="btn btn-primary btn-older-posts" href="{{ .Next.Permalink }}">
+          <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
-          </a>
-        </div>
+          </div>
+        </a>
       {{ else }}
-        <div class="btn btn-primary btn-older-posts disabled">
-          <a href="#">
+        <a class="btn btn-primary btn-older-posts disabled" href="#">
+          <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
-          </a>
-        </div>
+          </div>
+        </a>
       {{ end }}
       {{ if .Prev }}
-        <div class="btn btn-primary btn-newer-posts">
-          <a href="{{ .Prev.Permalink }}">
+        <a class="btn btn-primary btn-newer-posts" href="{{ .Prev.Permalink }}">
+          <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+          </div>
+        </a>
       {{ else }}
-        <div class="btn btn-primary btn-newer-posts disabled">
-          <a href="#">
+        <a class="btn btn-primary btn-newer-posts disabled" href="#">
+          <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+          </div>
+        </a>
       {{ end }}
     </div>
   </footer>
