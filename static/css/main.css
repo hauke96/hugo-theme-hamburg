@@ -89,7 +89,9 @@ a.btn-subscribe {
 }
 
 a.btn-back {
+    position: absolute;
     left: 20px;
+    top: 20px;
 }
 
 /* Navbar */
@@ -107,7 +109,6 @@ a.btn-back {
 .navbar-item {
     margin-left: 20px;
     position: initial !important;
-
 }
 
 .navbar-item:last-child {
