@@ -54,15 +54,15 @@
         {{ with $author.bio }}
         <div class="author-bio">{{ . }}</div>
         {{ end }}
+        {{ with $author.contact }}
+        <div class="btn btn-default author-contact">
+            <a href="{{ . }}">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                &nbsp;{{ i18n "contactMe" }}
+            </a>
+        </div>
+        {{ end }}
       </div>
-      {{ with $author.contact }}
-      <div class="author-contact col-md-4">
-        <a href="{{ . }}">
-          <i class="fa fa-envelope-o" aria-hidden="true"></i>
-          &nbsp;{{ i18n "contactMe" }}
-        </a>
-      </div>
-      {{ end }}
       {{ end }}
     </section>
     <ul class="pager">
