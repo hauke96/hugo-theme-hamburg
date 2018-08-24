@@ -19,6 +19,7 @@
       </div>
     </div>
   </header>
+  <div class="delimiter"></div>
   <section>
     {{ .Content }}
   </section>
@@ -26,7 +27,7 @@
     {{ if (isset .Params "nocomments")  }}
     {{ else }}
     {{ with .Site.Params.disqus }}
-    <hr/>
+    <div class="delimiter"></div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_shortname = '{{ . }}';
@@ -41,13 +42,14 @@
     {{ end }}
     {{ if (isset .Params "author")  }}
     {{ $author := index $data.authors .Params.author }}
-    <section class="author-info row">
-      <div class="author-avatar col-md-2">
+    <div class="delimiter"></div>
+    <section class="author-info">
+      <div class="author-avatar col-md-4">
         {{ with $author.avatar }}
         <img alt="Author Avatar" src="{{ . }}" />
         {{ end }}
       </div>
-      <div class="author-meta col-md-6">
+      <div class="author-meta col-md-8">
         {{ with $author.name }}
         <h1 class="author-name text-primary">{{ . }}</h1>
         {{ end }}
@@ -65,6 +67,7 @@
       </div>
       {{ end }}
     </section>
+    <div class="delimiter"></div>
     <div class="pager-container">
       {{ if .Next }}
         <div class="btn btn-primary btn-older-posts">
@@ -95,5 +98,6 @@
     </div>
   </footer>
 </article>
+<div class="delimiter"></div>
 
 {{ partial "footer.html" . }}
