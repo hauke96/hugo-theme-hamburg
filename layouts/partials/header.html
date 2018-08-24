@@ -29,7 +29,7 @@
     {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
   </title>
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
+  <link rel="alternative stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github.css" />
@@ -56,7 +56,7 @@
       </h3>
       {{ end }}
       {{ if ne ( trim .URL "/" ) .Site.Language.Lang }}
-      <a href="{{ "/" | absLangURL }}" class="btn btn-default btn-home">
+      <a class="btn btn-default btn-home" href="{{ "/" | absLangURL }}">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;{{ i18n "home" }}
       </a>
@@ -64,11 +64,9 @@
       <!-- sites -->
       <div class="navbar-container">
         {{ range .Site.Menus.main }}
-          <div class="btn btn-default navbar-item">
-            <a href="{{ .URL | absLangURL | safeURL }}">
-              {{ .Name }}
-            </a>
-          </div>
+          <a class="btn btn-default navbar-item" href="{{ .URL | absLangURL | safeURL }}">
+            {{ .Name }}
+          </a>
         {{ end }}
       </div>
       <!-- Languages -->
@@ -77,9 +75,7 @@
       {{ if .IsTranslated }}
       <div class="language-container">
         {{ range .Site.Home.AllTranslations }}
-          <div class="btn btn-default language-button">
-            <a href="{{ .URL }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
-          </div>
+        <a class="btn btn-default language-button" href="{{ .URL }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
         {{ end }}
       </div>
       {{ end }}

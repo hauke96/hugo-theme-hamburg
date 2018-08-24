@@ -38,7 +38,7 @@ main {
     text-decoration: none;
 }
 
-a.btn-home {
+.btn-home {
     position: absolute;
     left: 20px;
     top: 20px;
@@ -224,7 +224,7 @@ small, .small {
   font-size: 80%;
 }
 
-.btn > a:hover {
+a > .btn:hover {
   text-decoration: none;
 }
 

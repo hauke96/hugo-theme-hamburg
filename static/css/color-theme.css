@@ -2,6 +2,7 @@
 From material design color palette:
 
 #f1f8e9 - Light Green  50
+#7cb342 - Light Green 600
 #558b2f - Light Green 800
 #33691e - Light Green 900
 
@@ -51,11 +52,6 @@ From material design color palette:
     color: #0000004d;
 }
 
-/* Color for e.g. headers and links */
-.text-primary, a {
-    color: #558b2f;
-}
-
 a:hover {
     color: #33691e;
 }
@@ -91,23 +87,25 @@ TODO Remove older-posts and newer-posts, when the "pagination.html" also uses th
     border-color: #98a0a4;
 }
 
-.btn {
-    border: 1px solid transparent;
+/* Color for e.g. headers and links */
+.text-primary, a {
+    color: #558b2f;
 }
 
 /* Primary buttons are the ones in the page (not in the header) */
 .btn-primary {
     background-color: transparent;
-    border-color: #ccc;
+    border-color: #7cb342;
+    color: #558b2f;
 }
 
 .btn-primary:hover {
-    color: #fff;
+    color: #33691e;
     background-color: #fff;
-    border-color: #558b2f;
+    border-color: #33691e;
 }
 
-.btn-primary.disabled, .btn-primary.disabled > a {
+.btn-primary.disabled, a.btn-primary.disabled {
     color: #616161;
     background-color: #fff;
     border-color: #bdbdbd;
@@ -118,10 +116,6 @@ TODO Remove older-posts and newer-posts, when the "pagination.html" also uses th
   color: #fff;
   background-color: transparent;
   border-color: #fff;
-}
-
-.btn-default > a {
-  color: #fff;
 }
 
 .btn-default:hover {

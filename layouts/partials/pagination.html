@@ -2,25 +2,33 @@
   <div class="delimiter"></div>
   <nav class="pagination" role="navigation">
     {{ if .HasNext }}
-      <div class="btn btn-primary btn-older-posts">
-        <a href="{{ .Next.URL }}"><span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}</a>
-      </div>
+      <a class="btn btn-primary btn-older-posts" href="{{ .Next.URL }}">
+        <div>
+          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+        </div>
+      </a>
     {{ else }}
-      <div class="btn btn-primary btn-older-posts disabled">
-        <a href="#"><span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}</a>
-      </div>
+      <a class="btn btn-primary btn-older-posts disable" href="#">
+        <div>
+          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+        </div>
+      </a>
     {{ end }}
     <div>
       <span>{{ i18n "pageOf" . }}</span>
     </div>
     {{ if .HasPrev }}
-      <div class="btn btn-primary btn-newer-posts">
-        <a href="{{ .Prev.URL }}">{{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      <a class="btn btn-primary btn-newer-posts" href="{{ .Next.URL }}">
+        <div>
+          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
     {{ else }}
-      <div class="btn btn-primary btn-newer-posts disabled">
-        <a href="#">{{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      <a class="btn btn-primary btn-newer-posts disable" href="#">
+        <div>
+          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
     {{ end }}
   </nav>
 {{ end }}
