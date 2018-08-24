@@ -17,16 +17,16 @@ main {
     height: 100%;
     min-height: inherit;
     background-color: rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
 }
 
 .header-text .tag-line {
     margin: 10px auto;
     padding: 0 10px;
     max-width: 430px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
     text-align: center;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .header-text .sns-links {
@@ -58,6 +58,10 @@ main {
     padding-top: 30px;
     text-align: center;
     font-weight: 200;
+    font-size: 52px;
+    border-bottom: 1px solid;
+    max-width: 550px;
+    padding-bottom: 17px;
 }
 
 .header-text h1 a {

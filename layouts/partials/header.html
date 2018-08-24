@@ -51,9 +51,9 @@
     <section class="header-text">
       <h1><a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
-      <div class="tag-line">
+      <h3 class="tag-line">
         {{ . }}
-      </div>
+      </h3>
       {{ end }}
       {{ if ne ( trim .URL "/" ) .Site.Language.Lang }}
       <a href="{{ "/" | absLangURL }}" class="btn btn-default btn-back">
