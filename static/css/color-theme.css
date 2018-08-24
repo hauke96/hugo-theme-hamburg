@@ -75,18 +75,6 @@ a:hover {
     color: #00000080;
 }
 
-/*
-TODO Remove older-posts and newer-posts, when the "pagination.html" also uses the btn-classes
-*/
-.older-posts, .newer-posts {
-    border: 1px solid #bdbdbd;
-}
-
-.older-posts:hover, .newer-posts:hover {
-    color: #889093;
-    border-color: #98a0a4;
-}
-
 /* Color for e.g. headers and links */
 .text-primary, a {
     color: #558b2f;
