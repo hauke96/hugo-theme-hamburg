@@ -246,10 +246,10 @@ article section img {
 .btn {
     font-size: 13px;
     line-height: 1.58823529;
-    border-radius: 3px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
+    /*
+    XXX Specify a radius for the buttons here
+    */
+    border-radius: 0px;
 }
 
 /*
