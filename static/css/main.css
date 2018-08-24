@@ -163,39 +163,6 @@ a.btn-home {
     margin-top: 10px;
 }
 
-/* Pagination */
-
-.pagination
-{
-    width: 100%;
-    text-align: center;
-}
-
-.older-posts,.newer-posts {
-    display: inline!important;
-    border-radius: 15px;
-    text-decoration: none;
-    transition: border .3s ease;
-    padding: 5px 14px;
-}
-
-.page-number {
-    display: inline-block;
-    min-width: 100px;
-    padding: 2px 0;
-}
-
-/*
-TODO Remove older-posts and newer-posts, when the "pagination.html" also uses the btn-classes
-*/
-.newer-posts {
-    float: left;
-}
-
-.older-posts {
-    float: right;
-}
-
 /* Article list */
 
 .li-h1 {
@@ -304,4 +271,11 @@ I don't use the default pager-class because I want to use the normal buttons wit
     margin-right: -20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: unset;
 }

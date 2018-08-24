@@ -7,7 +7,7 @@
 [olderPosts]
   other = "Older Posts"
 [pageOf]
-  other = "Page {{ .PageNumber }} of {{.TotalPages}}"
+  other = "Page {{ .PageNumber }} of {{ .TotalPages }}"
 [postedOn]
   other = "Posted on"
 [readMore]
