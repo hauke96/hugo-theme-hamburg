@@ -215,13 +215,11 @@ a.btn-back {
 }
 
 .author-info {
-    padding: 25px 0;
     overflow: auto;
 }
 
 .author-name {
     margin: 0 0 5px 0;
-    font-size: 30px;
 }
 
 .author-bio {

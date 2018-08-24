@@ -46,24 +46,24 @@
     {{ $author := index $data.authors .Params.author }}
     <div class="delimiter"></div>
     <section class="author-info">
-      <div class="author-avatar col-md-4">
+      <div class="author-avatar col-md-2">
         {{ with $author.avatar }}
         <img alt="Author Avatar" src="{{ . }}" />
         {{ end }}
       </div>
-      <div class="author-meta col-md-8">
+      <div class="author-meta col-md-10">
         {{ with $author.name }}
-        <h1 class="author-name text-primary">{{ . }}</h1>
+          <h2 class="author-name text-primary">{{ . }}</h2>
         {{ end }}
         {{ with $author.bio }}
-        <div class="author-bio">{{ . }}</div>
+          <div class="author-bio">{{ . }}</div>
         {{ end }}
         {{ with $author.contact }}
         <div class="btn btn-primary author-contact">
-            <a href="{{ . }}">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                &nbsp;{{ i18n "contactMe" }}
-            </a>
+          <a href="{{ . }}">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            &nbsp;{{ i18n "contactMe" }}
+          </a>
         </div>
         {{ end }}
       </div>
