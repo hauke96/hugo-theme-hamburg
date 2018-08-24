@@ -65,34 +65,34 @@
       </div>
       {{ end }}
     </section>
-    <ul class="pager">
+    <div class="pager-container">
       {{ if .Next }}
-        <li class="previous">
+        <div class="btn btn-primary btn-older-posts">
           <a href="{{ .Next.Permalink }}">
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </a>
-        </li>
+        </div>
       {{ else }}
-        <li class="previous disabled">
+        <div class="btn btn-primary btn-older-posts disabled">
           <a href="#">
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </a>
-        </li>
+        </div>
       {{ end }}
       {{ if .Prev }}
-        <li class="next">
+        <div class="btn btn-primary btn-newer-posts">
           <a href="{{ .Prev.Permalink }}">
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </a>
-        </li>
+        </div>
       {{ else }}
-        <li class="next disabled">
+        <div class="btn btn-primary btn-newer-posts disabled">
           <a href="#">
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </a>
-        </li>
+        </div>
       {{ end }}
-    </ul>
+    </div>
   </footer>
 </article>
 

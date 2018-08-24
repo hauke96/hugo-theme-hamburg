@@ -6,6 +6,7 @@ From material design color palette:
 #33691e - Light Green 900
 
 #bdbdbd - Gray 400
+#616161 - Gray 700
 */
 
 .text-primary, a {
@@ -26,14 +27,7 @@ a:hover {
     color: #bdbdbd;
 }
 
-.pager li > a:hover,
-.pager li > span:hover {
-    border-color: #558b2f;
-    background-color: transparent;
-}
-
-.btn-primary,
-.pager li > a {
+.btn-primary {
     background-color: transparent;
     border-color: #ccc;
 }
@@ -42,6 +36,12 @@ a:hover {
     color: #fff;
     background-color: #fff;
     border-color: #558b2f;
+}
+
+.btn-primary.disabled, .btn-primary.disabled > a {
+    color: #616161;
+    background-color: #fff;
+    border-color: #bdbdbd;
 }
 
 .btn-default {

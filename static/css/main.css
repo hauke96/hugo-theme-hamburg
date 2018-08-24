@@ -118,7 +118,6 @@ a.btn-back {
 /* Footer */
 
 .global-footer {
-    margin-top: 10px;
     padding-top: 10px;
     max-width: 750px;
     height: 100px;
@@ -295,12 +294,27 @@ article section img {
       -ms-user-select: none;
 }
 
-.pager li > a, .pager li > span {
-    border-radius: 3px;
-}
-
-.btn:hover, .btn-primary:hover, .btn-default:hover, .pager li > a {
+.btn:hover, .btn-primary:hover, .btn-default:hover {
     -webkit-transition: background-color 0.1s linear;
     -ms-transition: background-color 0.1s linear;
     transition: background-color 0.1s linear;
+}
+
+.btn-older-posts {
+    float: left;
+}
+
+.btn-newer-posts {
+    float: right;
+}
+
+/*
+Paging at the bottom
+
+I don't use the default pager-class because I want to use the normal buttons with my style
+*/
+.pager-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
 }
