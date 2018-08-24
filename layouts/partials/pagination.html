@@ -1,9 +1,9 @@
 <nav class="pagination" role="navigation">
 {{ if or .HasPrev .HasNext }}
-  <hr />
+  <div class="delimiter"></div>
 {{ end }}
 {{if .HasPrev}}
-<a class="newer-posts" href="{{ .Prev.URL }}"><span aria-hidden="true">&laquo;</span> {{ i18n "newerPosts" }}</a>
+  <a class="newer-posts" href="{{ .Prev.URL }}"><span aria-hidden="true">&laquo;</span> {{ i18n "newerPosts" }}</a>
 {{end}}
   <span class="page-number">{{ i18n "pageOn" }}</span>
 {{if .HasNext}}

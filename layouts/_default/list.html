@@ -2,9 +2,8 @@
 <section class="article-list">
   <h1>{{ .Title }}</h1>
   {{ range .Data.Pages }}
-  <hr/>
+  <div class="delimiter"></div>
   {{ .Render "li" }}
   {{ end }}
 </section>
 {{ partial "footer.html" . }}
-

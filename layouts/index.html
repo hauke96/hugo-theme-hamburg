@@ -2,11 +2,10 @@
 <div class="article-list">
   {{ range $index, $page := .Paginator.Pages }}
   {{ if ne $index 0 }}
-  <hr/>
+  <div class="delimiter"></div>
   {{ end }}
   {{ .Render "li" }}
   {{ end }}
 </div>
 {{ partial "pagination.html" .Paginator }}
 {{ partial "footer.html" . }}
-
