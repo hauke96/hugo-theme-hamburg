@@ -1,0 +1,16 @@
+[pageNotExists]
+  other = "Diese Seite existiert nicht!"
+[home]
+  other = "Start"
+[newerPosts]
+  other = "Neuere Beiträge"
+[olderPosts]
+  other = "Ältere Beiträge"
+[pageOf]
+  other = "Seite {{ .PageNumber }} von {{.TotalPages}}"
+[postedOn]
+  other = "Veröffentlicht am"
+[readMore]
+  other = "Weiter lesen"
+[contactMe]
+  other = "Schreibe mir"

@@ -8,7 +8,7 @@
     {{ if (isset .Params "noshowdate")  }}
     {{ else }}
       <div class="post-date pull-left">
-        Posted on
+        {{ i18n "postedOn" }}
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
           {{ .Date.Format "Jan 2, 2006" }}
         </time>
@@ -61,7 +61,7 @@
       <div class="author-contact col-md-4">
         <a href="{{ . }}">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
-          &nbsp;Contact me
+          &nbsp;{{ i18n "contactMe" }}
         </a>
       </div>
       {{ end }}
@@ -69,14 +69,14 @@
     </section>
     <ul class="pager">
       {{ if .Next }}
-      <li class="previous"><a href="{{ .Next.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="{{ .Next.Permalink }}"><span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}</a></li>
       {{ else }}
-      <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}</a></li>
       {{ end }}
       {{ if .Prev }}
-      <li class="next"><a href="{{ .Prev.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next"><a href="{{ .Prev.Permalink }}">{{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span></a></li>
       {{ else }}
-      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next disabled"><a href="#">{{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span></a></li>
       {{ end }}
     </ul>
   </footer>
