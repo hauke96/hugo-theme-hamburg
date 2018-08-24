@@ -6,15 +6,12 @@ main {
 /* Header */
 
 .global-header {
-    background: #222 no-repeat center top;
     background-size: cover;
     min-height: 350px;
 }
 
 .header-text {
     position: relative;
-    padding-bottom: 1px;
-    height: 100%;
     min-height: inherit;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
@@ -27,30 +24,6 @@ main {
     color: #fff;
     text-align: center;
     font-weight: 200;
-}
-
-.header-text .sns-links {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.header-text .sns-links a {
-    display: inline-block;
-    margin: 0 2px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 15px;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    font-size: inherit;
-    line-height: 30px;
-    transition: color,border-color 0.1s linear;
-}
-
-.header-text .sns-links a:hover {
-    border-color: rgba(255, 255, 255, 1.0);
-    color: rgba(255, 255, 255, 1.0);
 }
 
 .header-text h1 {
@@ -69,30 +42,7 @@ main {
     text-decoration: none;
 }
 
-a.btn-header {
-    position: absolute;
-    top: 20px;
-    padding: 7px 16px;
-    border: 1px solid rgba(255, 255, 255, 1.0);
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(255, 255, 255, 1.0);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 13px;
-    transition: color,background-color 0.1s linear;
-}
-
-a.btn-header:hover {
-    background-color: rgba(255, 255, 255, 1.0);
-    color: rgba(0, 0, 0, 1.0);
-}
-
-a.btn-subscribe {
-    right: 20px;
-}
-
-a.btn-back {
+a.btn-home {
     position: absolute;
     left: 20px;
     top: 20px;
