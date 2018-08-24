@@ -282,20 +282,16 @@ a.btn-back {
     border-color: #98a0a4;
 }
 
-/* Override some of Bootstrap's styles */
+/* Bootstrap adjustions */
 
 pre {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 pre code {
     overflow: auto;
     white-space: pre;
     word-wrap: normal;
-}
-
-.pager li>a {
-    transition: background-color 0.1s linear;
 }
 
 blockquote {
@@ -312,8 +308,6 @@ article section img {
     margin: 13px auto;
 }
 
-/* Bootstrap adjustions */
-
 .btn {
     border: 1px solid transparent;
     font-size: 13px;
@@ -327,4 +321,8 @@ article section img {
 
 .pager li > a, .pager li > span {
     border-radius: 3px;
+}
+
+.pager li > a {
+    transition: background-color 0.1s linear;
 }
