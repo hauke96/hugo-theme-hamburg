@@ -21,7 +21,7 @@ main {
 }
 
 .header-text .tag-line {
-    margin: 10px auto;
+    margin: 25px auto;
     padding: 0 10px;
     max-width: 430px;
     color: #fff;
@@ -55,13 +55,13 @@ main {
 
 .header-text h1 {
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 52px;
     border-bottom: 1px solid;
     max-width: 550px;
-    padding-bottom: 17px;
 }
 
 .header-text h1 a {
