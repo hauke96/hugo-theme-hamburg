@@ -188,6 +188,10 @@ main {
     margin-bottom: 6px;
 }
 
+.read-more-container {
+    margin-top: 10px;
+}
+
 /* Bootstrap adjustions */
 
 h1,

@@ -11,13 +11,21 @@
     </div>
   </header>
   <div>
-    {{ .Summary }}
+    {{ if (isset .Params "summary") }}
+      {{ markdownify .Params.Summary }}
+    {{ else }}
+      {{ .Summary }}
+    {{ end }}
   </div>
   {{ if .Truncated }}
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="{{ .Permalink }}">{{ i18n "readMore" }} <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
+    <footer>
+      <div class="read-more-container">
+        <a class="btn btn-primary" href="{{ .Next.URL }}">
+          <div>
+            {{ i18n "readMore" }} <span aria-hidden="true">&rarr;</span>
+          </div>
+        </a>
+      </div>
+    </footer>
   {{ end }}
 </article>
