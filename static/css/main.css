@@ -41,7 +41,6 @@ main {
 .btn-home {
     position: absolute;
     left: 20px;
-    top: 20px;
 }
 
 /* Navbar */
@@ -72,13 +71,23 @@ main {
     flex-direction: row;
     justify-content: flex-end;
     position: absolute;
-    top: 20px;
     right: 20px;
 }
 
 .language-button {
     margin-left: 5px;
     position: initial !important;
+}
+
+@media (max-width: 992px) {
+  .language-container, .btn-home {
+    top: 190px;
+  }
+}
+@media (min-width: 992px) {
+  .language-container, .btn-home {
+    top: 20px;
+  }
 }
 
 /* Footer */
