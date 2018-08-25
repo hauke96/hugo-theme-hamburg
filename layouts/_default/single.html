@@ -45,7 +45,7 @@
     {{ if (isset .Params "author")  }}
     {{ $author := index $data.authors .Params.author }}
     <div class="delimiter"></div>
-    <section class="author-info">
+    <section class="author-info row">
       <div class="author-avatar col-md-2">
         {{ with $author.avatar }}
         <img alt="Author Avatar" src="{{ . }}" />
