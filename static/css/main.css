@@ -79,12 +79,7 @@ main {
     position: initial !important;
 }
 
-@media (max-width: 992px) {
-  .language-container, .btn-home {
-    top: 190px;
-  }
-}
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   .language-container, .btn-home {
     top: 20px;
   }
