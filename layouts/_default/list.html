@@ -2,8 +2,8 @@
 <section class="article-list">
   <h1>{{ .Title }}</h1>
   {{ range .Data.Pages }}
-  <div class="delimiter"></div>
-  {{ .Render "li" }}
+    <div class="delimiter"></div>
+    {{ .Render "li" }}
   {{ end }}
 </section>
 {{ partial "footer.html" . }}

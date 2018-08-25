@@ -5,24 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
   {{ with .Site.Params.themecolor }}
-  <meta name="theme-color" content="{{ . }}" />
- {{ end }}
+    <meta name="theme-color" content="{{ . }}" />
+  {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
-  {{ with .Params.images }}{{ range first 5 . }}
-  <meta property="og:image" content="{{ . }}" />
-  {{ end }}{{ end }}
+  {{ with .Params.images }}
+    {{ range first 5 . }}
+      <meta property="og:image" content="{{ . }}" />
+    {{ end }}
+  {{ end }}
   {{ if .IsPage }}
-  <meta property="og:type" content="article" />
-  {{ with .Site.Params.facebook }}
-  <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
-  {{ end }}
-  <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
-  {{ range .Params.tags }}
-  <meta property="og:article:tag" content="{{ . }}" />
-  {{ end }}
+    <meta property="og:type" content="article" />
+    {{ with .Site.Params.facebook }}
+      <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
+    {{ end }}
+    <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+    {{ range .Params.tags }}
+      <meta property="og:article:tag" content="{{ . }}" />
+    {{ end }}
   {{ else }}
-  <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
   {{ end }}
 
   <title>
@@ -39,11 +41,11 @@
   <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/apple-touch-icon.png" />
 
   {{ range .Site.Params.customCSS }}
-  <link rel="stylesheet" href="{{ (print "css/" . ) | absURL }}">
+    <link rel="stylesheet" href="{{ (print "css/" . ) | absURL }}">
   {{ end }}
 
   {{ if eq .URL "/" }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
 </head>
 <body>
@@ -51,15 +53,15 @@
     <section class="header-text">
       <h1><a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
-      <h3 class="tag-line">
-        {{ . }}
-      </h3>
+        <h3 class="tag-line">
+          {{ . }}
+        </h3>
       {{ end }}
       {{ if ne ( trim .URL "/" ) .Site.Language.Lang }}
-      <a class="btn btn-default btn-home" href="{{ "/" | absLangURL }}">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        &nbsp;{{ i18n "home" }}
-      </a>
+        <a class="btn btn-default btn-home" href="{{ "/" | absLangURL }}">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          &nbsp;{{ i18n "home" }}
+        </a>
       {{ end }}
       <!-- sites -->
       <div class="navbar-container">
@@ -73,11 +75,11 @@
       {{ $url := urls.Parse .Permalink }}
       {{ $path := strings.TrimPrefix (print "/" .Language "/") $url.Path }}
       {{ if .IsTranslated }}
-      <div class="language-container">
-        {{ range .Site.Home.AllTranslations }}
-        <a class="btn btn-default language-button" href="{{ .URL }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
-        {{ end }}
-      </div>
+        <div class="language-container">
+          {{ range .Site.Home.AllTranslations }}
+            <a class="btn btn-default language-button" href="{{ .URL }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
+          {{ end }}
+        </div>
       {{ end }}
     </section>
   </header>
