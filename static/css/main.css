@@ -192,6 +192,16 @@ main {
     margin-top: 10px;
 }
 
+/* Tag list */
+#container-tags-title {
+    display: flex;
+    justify-content: space-between;
+}
+#btn-all-tags {
+    align-self: flex-end;
+    margin-bottom: 13px;
+}
+
 /* Bootstrap adjustions */
 
 h1,
