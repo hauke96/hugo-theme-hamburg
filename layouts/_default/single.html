@@ -21,7 +21,9 @@
     {{ end }}
     <div class="pull-right">
       {{ range .Params.tags }}
-        <span class="post-tag small"><a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a></span>
+        {{ with $.Site.GetPage "taxonomy" ( print "/tags/" ( . | urlize ) ) }}
+          <span class="post-tag small"><a href="{{ .Permalink }}">#{{ .Name }}</a></span>
+        {{ end }}
       {{ end }}
     </div>
   </div>
