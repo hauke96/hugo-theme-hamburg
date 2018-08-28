@@ -1,7 +1,8 @@
 +++
-draft: true
+draft = true
 title = ""
-description = ""
-date: {{ .Date }}
+summary = ""
+date = {{ .Date }}
 tags = []
+author = ""
 +++
