@@ -3,7 +3,7 @@
   <div id="container-tags-title">
     <h1>{{ .Title }}</h1>
     <a class="btn btn-primary" id="btn-all-tags" href="{{ "/tags" | absLangURL }}">
-      All tags
+      {{ i18n "allTags" }}
     </a>
   </div>
   {{ range .Data.Pages }}

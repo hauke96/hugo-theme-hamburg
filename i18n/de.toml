@@ -16,3 +16,5 @@
   other = "Schreibe mir"
 [dateformat]
   other = "02.01.2006 um 15:04"
+[allTags]
+  other = "Alle Tags"

@@ -16,3 +16,5 @@
   other = "Contact me"
 [dateformat]
   other = "Jan 2, 2006 at 15:04"
+[allTags]
+  other = "All tags"
