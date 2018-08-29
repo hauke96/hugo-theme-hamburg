@@ -49,9 +49,13 @@
   {{ end }}
 </head>
 <body>
-  <header class="global-header"  style="background-image:url({{ if isset .Params "image" }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})">
+  {{ if isset .Params "image" }}
+  <header class="global-header"  style="background-image:url({{ .Params.image }})">
+  {{ else }}
+  <header class="global-header"  style="background-image:url({{ "images/bg.jpg" | absURL }})">
+  {{ end }}
     <section class="header-text">
-      <h1><a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a></h1>
+      <h1><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
         <h3 class="tag-line">
           {{ . }}
