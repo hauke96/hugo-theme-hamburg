@@ -62,7 +62,7 @@
         </h3>
       {{ end }}
       {{ if ne ( trim .URL "/" ) .Site.Language.Lang }}
-        <a class="btn btn-default btn-home" href="{{ "/" | absLangURL }}">
+        <a class="btn btn-default btn-home" href="{{ "" | absLangURL }}">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
           &nbsp;{{ i18n "home" }}
         </a>
