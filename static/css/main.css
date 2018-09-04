@@ -193,6 +193,7 @@ main {
 }
 
 /* Tag list */
+
 #container-tags-title {
     display: flex;
     justify-content: space-between;
@@ -200,6 +201,9 @@ main {
 #btn-all-tags {
     align-self: flex-end;
     margin-bottom: 13px;
+}
+.list-group-item {
+  border-radius: 0px !important;
 }
 
 /* Bootstrap adjustions */
