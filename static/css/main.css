@@ -307,3 +307,12 @@ I don't use the default pager-class because I want to use the normal buttons wit
     margin-bottom: 20px;
     border-radius: unset;
 }
+
+.info {
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    opacity: 1;
+    padding: 10px;
+    text-align: center;
+}
