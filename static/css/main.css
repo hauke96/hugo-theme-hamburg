@@ -312,7 +312,29 @@ I don't use the default pager-class because I want to use the normal buttons wit
     position: fixed;
     bottom:0%;
     width:100%;
-    opacity: 1;
     padding: 10px;
+    display: flex;
     text-align: center;
+    flex-direction: column;
+}
+
+.info-content {
+  margin: auto;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .info-content {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .info-content {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .info-content {
+    width: 1170px;
+  }
 }
