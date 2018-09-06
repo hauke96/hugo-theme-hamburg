@@ -18,3 +18,5 @@
   other = "02.01.2006 um 15:04"
 [allTags]
   other = "Alle Tags"
+[gdprNotice]
+  other = "Damit wir sehen können was unseren Besuchern gefällt, speichern wir Zugriffe, Browser- und Betriebssystemversion, sowie die erste Hälfte der IP Adresse. Damit bist du nicht eindeutig verfolgbar. Diese Informationen sind auf unserem Server gespeichert (also nicht bei Google oder anderen Dritten) und wir geben sie niemandem weiter."

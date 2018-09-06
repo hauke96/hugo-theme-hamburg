@@ -117,3 +117,8 @@ a.btn-primary.disabled:focus {
     background-color: #bdbdbd4d;
     border-color: #fff;
 }
+
+.info {
+  background-color: #393838;
+  color: #fff;
+}
