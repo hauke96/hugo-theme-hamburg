@@ -192,6 +192,20 @@ main {
     margin-top: 10px;
 }
 
+/* Tag list */
+
+#container-tags-title {
+    display: flex;
+    justify-content: space-between;
+}
+#btn-all-tags {
+    align-self: flex-end;
+    margin-bottom: 13px;
+}
+.list-group-item {
+  border-radius: 0px !important;
+}
+
 /* Bootstrap adjustions */
 
 h1,
@@ -296,4 +310,35 @@ I don't use the default pager-class because I want to use the normal buttons wit
     justify-content: space-between;
     margin-bottom: 20px;
     border-radius: unset;
+}
+
+.info {
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.info-content {
+  margin: auto;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .info-content {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .info-content {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .info-content {
+    width: 1170px;
+  }
 }

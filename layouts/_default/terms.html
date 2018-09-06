@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL}}
 <section class="taxonomy-terms">
   <h1>{{ .Title }}</h1>
-  <ul>
-    {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
+  {{ $data := .Data }}
+  <div class="list-group">
+    {{ range $key, $value := .Data.Pages }}
+      <a class="list-group-item" href="{{ $value.URL }}">
+        {{ $value.Name }}
+      </a>
     {{ end }}
-  </ul>
+  </div>
 </section>
 {{ partial "footer.html" . }}
-

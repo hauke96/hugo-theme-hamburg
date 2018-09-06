@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<section class="article-list">
+  <div id="container-tags-title">
+    <h1>{{ .Title }}</h1>
+    <a class="btn btn-primary" id="btn-all-tags" href="{{ "tags" | absLangURL }}">
+      {{ i18n "allTags" }}
+    </a>
+  </div>
+  {{ range .Data.Pages }}
+    <div class="delimiter"></div>
+    {{ .Render "li" }}
+  {{ end }}
+</section>
+{{ partial "footer.html" . }}

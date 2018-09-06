@@ -52,7 +52,8 @@ From material design color palette:
     color: #0000004d;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: #33691e;
 }
 
@@ -87,13 +88,17 @@ a:hover {
     color: #558b2f;
 }
 
+.btn-primary:focus,
 .btn-primary:hover {
     color: #33691e;
     background-color: #fff;
     border-color: #33691e;
 }
 
-.btn-primary.disabled, a.btn-primary.disabled {
+.btn-primary.disabled,
+.btn-primary.disabled:focus,
+a.btn-primary.disabled,
+a.btn-primary.disabled:focus {
     color: #616161;
     background-color: #fff;
     border-color: #bdbdbd;
@@ -106,8 +111,14 @@ a:hover {
   border-color: #fff;
 }
 
+.btn-default:focus,
 .btn-default:hover {
     color: #fff;
     background-color: #bdbdbd4d;
     border-color: #fff;
+}
+
+.info {
+  background-color: #393838;
+  color: #fff;
 }
