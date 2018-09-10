@@ -1,11 +1,17 @@
-author = "Hauke Stieler"
 name = "hamburg"
-description = "Simple and clean blog theme for hugo"
 license = "MIT"
+licenselink = "https://github.com/hauke96/hugo-theme-hamburg/blob/master/LICENSE.md"
+description = "Simple and clean blog theme for hugo"
+homepage = "https://github.com/hauke96/hugo-theme-hamburg"
 tags = ["blog", "tags", "bootstrap", "multilingual", "clean", "minimal", "disqus", "font awesome", "mobile"]
-source_repo = "git@github.com:hauke96/hugo-theme-hamburg.git"
+repo = "https://github.com/hauke96/hugo-theme-hamburg"
+
+[author]
+	name = "Hauke Stieler"
+	homepage = "https://hauke-stieler.de"
 
 [original]
-author = "Keichi Takahashi"
-name = "vienna"
-source_repo = "git@github.com:keichi/vienna.git"
+	author = "Keichi Takahashi"
+	name = "vienna"
+	homepage = "https://keichi.net/"
+	repo = "https://github.com/keichi/vienna"
