@@ -44,7 +44,7 @@
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {{ end }}
     {{ end }}
-    {{ if (isset .Params "author")  }}
+    {{ if and (isset $data "authors") (isset .Params "author") }}
     {{ $author := index $data.authors .Params.author }}
     <div class="delimiter"></div>
     <section class="author-info row">
