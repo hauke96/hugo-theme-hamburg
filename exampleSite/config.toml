@@ -1,0 +1,14 @@
+baseurl = "http://localhost:1313/"
+title = "Hamburg theme example"
+copyright = "&copy; Lorem ipsum ... and so on ..."
+
+theme = "hamburg"
+
+[menu]
+	[[menu.main]]
+		name = "About"
+		identifier = "about"
+		url = "pages/about"
+
+[params]
+	subtitle = "The great example site of the hugo-hamburg-theme"

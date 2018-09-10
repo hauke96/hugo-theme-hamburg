@@ -30,47 +30,47 @@
   <footer>
     {{ if (isset .Params "nocomments")  }}
     {{ else }}
-    {{ with .Site.Params.disqus }}
-    <div class="delimiter"></div>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_shortname = '{{ . }}';
-      (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    {{ end }}
-    {{ end }}
-    {{ if (isset .Params "author")  }}
-    {{ $author := index $data.authors .Params.author }}
-    <div class="delimiter"></div>
-    <section class="author-info row">
-      <div class="author-avatar col-md-2">
-        {{ with $author.avatar }}
-        <img alt="Author Avatar" src="{{ . }}" />
-        {{ end }}
-      </div>
-      <div class="author-meta col-md-10">
-        {{ with $author.name }}
-          <h2 class="author-name text-primary">{{ . }}</h2>
-        {{ end }}
-        {{ with $author.bio }}
-          <div class="author-bio">{{ . }}</div>
-        {{ end }}
-        {{ with $author.contact }}
-          <a class="btn btn-primary author-contact" href="{{ . }}">
-            <div>
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              &nbsp;{{ i18n "contactMe" }}
-            </div>
-          </a>
-        {{ end }}
-      </div>
+      {{ with .Site.Params.disqus }}
+        <div class="delimiter"></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = '{{ . }}';
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       {{ end }}
-    </section>
+    {{ end }}
+    {{ if and (isset $data "authors") (isset .Params "author") }}
+      {{ $author := index $data.authors .Params.author }}
+        <div class="delimiter"></div>
+        <section class="author-info row">
+          <div class="author-avatar col-md-2">
+            {{ with $author.avatar }}
+              <img alt="Author Avatar" src="{{ . }}" />
+            {{ end }}
+          </div>
+          <div class="author-meta col-md-10">
+            {{ with $author.name }}
+              <h2 class="author-name text-primary">{{ . }}</h2>
+            {{ end }}
+            {{ with $author.bio }}
+              <div class="author-bio">{{ . }}</div>
+            {{ end }}
+            {{ with $author.contact }}
+              <a class="btn btn-primary author-contact" href="{{ . }}">
+                <div>
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  &nbsp;{{ i18n "contactMe" }}
+                </div>
+              </a>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
     <div class="delimiter"></div>
     <div class="pager-container">
       {{ if .Next }}
