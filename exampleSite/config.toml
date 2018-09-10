@@ -1,4 +1,6 @@
-baseurl = "http://localhost:1313/"
+baseurl = "http://example.com/"
+# If you use "hugo server" you might want to use this entry:
+#baseurl = "http://localhost:1313/"
 title = "Hamburg theme example"
 copyright = "&copy; Lorem ipsum ... and so on ..."
 
