@@ -20,25 +20,20 @@ Notable features I would tell somebody are:
 
 In your hugo site directory, run:
 
-```shell
-$ mkdir themes
-$ cd themes
-$ git clone https://github.com/hauke96/hugo-theme-hamburg
-```
+`git clone https://github.com/hauke96/hugo-theme-hamburg.git themes/hamburg`
 
-The theme should now be in `themes/hugo-theme-hamburg/`.
+The theme should now be in `themes/hamburg/`.
 
 # Configuration
 
-You may specify following options in `config.toml` of your site to make use of
-this theme's features (I've not tested other options so far).
+You may specify following options in `config.toml` (or `config.yaml`/`config.json`) of your site to make use of this theme's features:
 
 ```toml
 baseurl = "http://your-site.com"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = "true"
 title = "Your site title"
-theme = "hugo-theme-hamburg"
+theme = "hamburg"
 
 [params]
     # Short subtitle/tagline. This is displayed in the header.
@@ -73,7 +68,7 @@ theme = "hugo-theme-hamburg"
 ```
 
 ### Additional `vienna`-theme params
-There're some other params I've not used so far. They probably work, but there's no guarantee:
+There're some other params from the [original vienna theme](https://github.com/keichi/vienna) I've not used so far. They probably work, but there's no guarantee:
 ```toml
 [params]
     # Social accounts. Link to these accounts are displayed in the header and
@@ -97,6 +92,8 @@ There're some other params I've not used so far. They probably work, but there's
     mixpanel_api_key = "Your Mixpanel API key"
 ```
 
+# Usage
+
 ## Params of posts (front matter)
 There're some options you can set in the header of a post or page:
 
@@ -115,7 +112,7 @@ noshowdate = true
 ## Multiple authors
 This theme will read the information of an author based on the language code of a page.
 
-To support multiple authors, create a `data/<lang>/authors/name.toml` file (so e.g. `data/en/authors/hauke96.toml`). This file contains the normal author information:
+To support multiple authors, create a `data/<lang>/authors/name.toml` file (so e.g. `data/en/authors/hauke96.toml`). This file contains information about the author:
 
 ```toml
 name = "Your name"
@@ -124,24 +121,18 @@ contact = "mailto:mail@foobar.com"
 bio = "Something about you"
 ```
 
-To support multiple languages, create multiple directories in the `data` directory. So for German (`languageCode` set to `"de"`) the above example would also have a `data/de/authors/hauke96.toml` file.
+To support multiple languages, create multiple directories in the `data` directory. So for German as second language (`languageCode` would be `de`) the above example would also have a `data/de/authors/hauke96.toml` file.
 
 ## Tracking
 You can use the above configuration with e.g. Google Analytics or use your own JavaScript snippet to do so.
 
-For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (is it exists) will be embedded in the header right before the `</head>` tag.
+For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (if it exists) will be embedded into the header right before the `</head>` tag.
 
-# Usage
-Add this line to your config file (e.g. `config.toml`):
-```toml
-theme = "hugo-theme-hamburg"
-```
-The theme mus therefore be stores under `themes/hugo-theme-hamburg/`.
+I tested this with the Matomo analytics software, which provides a JavaScript snipped I put into the `tracking.html`.
 
 ### Temporarily
-Use hugo's `-t hugo-theme-hamnburg` or `--theme=hugo-theme-hamburg` option with hugo commands.
-Example:
+Use the normal hugo `-t` option to specify the theme:
 
-```shell
-$ hugo server -t hugo-theme-hamburg -D
-```
+`hugo server -t hamburg`
+
+The theme must be available in the `./themes/hamburg/` folder.
