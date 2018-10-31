@@ -18,7 +18,7 @@
       <span>{{ i18n "pageOf" . }}</span>
     </div>
     {{ if .HasPrev }}
-      <a class="btn btn-primary btn-newer-posts" href="{{ .Next.URL }}">
+      <a class="btn btn-primary btn-newer-posts" href="{{ .Prev.URL }}">
         <div>
           {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
         </div>
