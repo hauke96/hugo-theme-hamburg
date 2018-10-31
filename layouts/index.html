@@ -7,7 +7,7 @@
     {{ .Render "li" }}
   {{ end }}
 </div>
-{{ if (isset . "Paginator") }}
+{{ if (not (eq nil .Paginator)) }}
   {{ partial "pagination.html" .Paginator }}
 {{ end }}
 {{ partial "footer.html" . }}
