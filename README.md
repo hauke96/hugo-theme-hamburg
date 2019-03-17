@@ -109,6 +109,21 @@ summary = "Dies ist nur ein Testbeitrag um die Website zu testen."
 noshowdate = true
 ```
 
+## Shortcodes
+There're some simple shortcodes to make things easier.
+
+### Link to a tag
+Creates a simple link to a tag page:
+```
+I like {{< linkTag veggy-food "yummi vegetarian food" >}}.
+```
+
+### Include images
+Includes images and opens them in a new tab when clicked:
+```
+{{< img "photo.png" "What a lovely picture" >}}
+```
+
 ## Multiple authors
 This theme will read the information of an author based on the language code of a page.
 
