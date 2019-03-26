@@ -1,6 +1,6 @@
 <figure>
-	<a href={{ .Page.Site.BaseURL }}/images/{{ index .Params 0 }} target="_blank">
-		<img src={{ .Page.Site.BaseURL }}/images/{{ index .Params 0 }}>
+	<a href={{ strings.TrimSuffix "/" .Page.Site.BaseURL }}/images/{{ index .Params 0 }} target="_blank">
+		<img src={{ strings.TrimSuffix "/" .Page.Site.BaseURL }}/images/{{ index .Params 0 }}>
 	</a>
 	<figcaption>
 		<h4>
