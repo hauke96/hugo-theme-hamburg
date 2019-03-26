@@ -1,11 +1,25 @@
+{{ $imageName := (index .Params 0) }}
+{{ $subtitle := (index .Params 1) }}
+
+<!-- Try to find image locally in the posts folder -->
+{{ $image := .Page.Resources.GetMatch $imageName }}
+
+<!-- Try to find image from "/images" folder -->
+{{ if not $image}}
+	{{ $imagesPage := .Site.GetPage "/images" }}
+	{{ $image = $imagesPage.Resources.GetMatch $imageName }}
+{{ end }}
+
 <figure>
-	<a href={{ strings.TrimSuffix "/" .Page.Site.BaseURL }}/images/{{ index .Params 0 }} target="_blank">
-		<img src={{ strings.TrimSuffix "/" .Page.Site.BaseURL }}/images/{{ index .Params 0 }}>
+	<a href={{ $image.Permalink }} target="_blank">
+		<center>
+			<img src={{ $image.Permalink }}>
+		</center>
 	</a>
 	<figcaption>
 		<h4>
 			<center>
-				{{ index .Params 1 }}
+				{{ $subtitle }}
 			</center>
 		</h4>
 	</figcaption>
