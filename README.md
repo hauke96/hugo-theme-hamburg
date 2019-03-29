@@ -124,6 +124,19 @@ Includes images and opens them in a new tab when clicked:
 {{< img "photo.png" "What a lovely picture" >}}
 ```
 
+### Get URL to an image
+Creates a link to the given image
+```
+{{< imgUrl "photo.png" "link text" >}}
+```
+
+### Embed scaled image
+Scales an image to the given size and embeds it like the shortcode `img` does.
+```
+{{< imgUrl "photo.png" "What a lovely picture" "500x" >}}
+```
+(This image is scaled to 500 pixels in width, the height is determined automatically)
+
 ## Multiple authors
 This theme will read the information of an author based on the language code of a page.
 
