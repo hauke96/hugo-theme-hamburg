@@ -7,7 +7,7 @@ From material design color palette:
 #33691e - Light Green 900
 
 #bdbdbd - Gray 400
-#616161 - Gray 700
+#757575 - Gray 600
 
 #000000 - Black
 
@@ -34,8 +34,8 @@ From material design color palette:
 
 /* The social-icons */
 .global-footer .sns-links a {
-    border: 1px solid #0000004d;
-    color: #0000004d;
+    border: 1px solid #757575;
+    color: #757575;
 }
 
 .global-footer .sns-links a:hover {
@@ -45,11 +45,11 @@ From material design color palette:
 
 /* The whole footer-area */
 .global-footer {
-    color: #0000004d;
+    color: #757575;
 }
 
 .post-date {
-    color: #0000004d;
+    color: #757575;
 }
 
 a:hover,
@@ -59,8 +59,8 @@ a:focus {
 
 /* Tags of articles and pages */
 .post-tag a {
-  border: 1px solid #0000004d;
-  color: #0000004d;
+  border: 1px solid #757575;
+  color: #757575;
 }
 
 .post-tag a:hover {
@@ -69,11 +69,11 @@ a:focus {
 }
 
 .not-found h1 {
-    color: #0000004d;
+    color: #757575;
 }
 
 .author-bio {
-    color: #00000080;
+    color: #757575;
 }
 
 /* Color for e.g. headers and links */
@@ -99,7 +99,7 @@ a:focus {
 .btn-primary.disabled:focus,
 a.btn-primary.disabled,
 a.btn-primary.disabled:focus {
-    color: #616161;
+    color: #757575;
     background-color: #fff;
     border-color: #bdbdbd;
 }
