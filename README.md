@@ -1,20 +1,23 @@
 # Hamburg
-(based on the [vienna-theme](https://github.com/keichi/vienna) from [keichi](https://github.com/keichi))
+
+Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/) based on the [vienna-theme](https://github.com/keichi/vienna) from [keichi](https://github.com/keichi).
 
 # Overview
 
-Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/).
 Notable features I would tell somebody are:
 
-- Clean and flat design
-- Tags
-- Menu
+- Consistent design
+	- Clean and flat design
+	- Easy to customize
+	- Responsive design (mobile friendly)
+	- Font Awesome icons
+- Navigation
+	- Tags
+	- Menu
 - Support for multiple authors
 - Multilingual (in every way! Author information, menus, pages, posts, tags)
-- Responsive design (mobile friendly)
-- Font Awesome icons
-- Analytics with Google Analytics, Mixpanel or custom tracking page
-- Easy to customize
+- Analytics with any JavaScript-Snipped based service (Google Analytics, Matomo/Piwik, ...)
+- Addional shortcodes
 
 # Installation
 
