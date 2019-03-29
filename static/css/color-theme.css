@@ -2,10 +2,12 @@
 From material design color palette:
 
 #dcedc8 - Light Green 100
+#9ccc65 - Light Green 400
 #558b2f - Light Green 800
 
 #bdbdbd - Gray 400
 #757575 - Gray 600
+#424242 - Gray 800
 
 #000000 - Black
 */
@@ -141,4 +143,13 @@ a.btn-primary.disabled:focus {
 .info {
   background-color: #424242;
   color: #fff;
+}
+
+.embedded-image {
+    border: 1px solid #dcedc8;
+}
+
+.embedded-image:hover,
+.embedded-image:focus {
+    border: 1px solid #9ccc65;
 }

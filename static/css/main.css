@@ -342,3 +342,8 @@ I don't use the default pager-class because I want to use the normal buttons wit
     width: 1170px;
   }
 }
+
+/* Images */
+.embedded-image {
+	padding: 5px;
+}
