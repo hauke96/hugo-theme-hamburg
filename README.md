@@ -160,10 +160,3 @@ You can use the above configuration with e.g. Google Analytics or use your own J
 For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (if it exists) will be embedded into the header right before the `</head>` tag.
 
 I tested this with the Matomo analytics software, which provides a JavaScript snipped I put into the `tracking.html`.
-
-### Temporarily
-Use the normal hugo `-t` option to specify the theme:
-
-`hugo server -t hamburg`
-
-The theme must be available in the `./themes/hamburg/` folder.
