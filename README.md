@@ -1,20 +1,23 @@
 # Hamburg
-(based on the [vienna-theme](https://github.com/keichi/vienna) from [keichi](https://github.com/keichi))
+
+Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/) based on the [vienna-theme](https://github.com/keichi/vienna) from [keichi](https://github.com/keichi).
 
 # Overview
 
-Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/).
 Notable features I would tell somebody are:
 
-- Clean and flat design
-- Tags
-- Menu
+- Consistent design
+	- Clean and flat design
+	- Easy to customize
+	- Responsive design (mobile friendly)
+	- Font Awesome icons
+- Navigation
+	- Tags
+	- Menu
 - Support for multiple authors
 - Multilingual (in every way! Author information, menus, pages, posts, tags)
-- Responsive design (mobile friendly)
-- Font Awesome icons
-- Analytics with Google Analytics, Mixpanel or custom tracking page
-- Easy to customize
+- Analytics with any JavaScript-Snipped based service (Google Analytics, Matomo/Piwik, ...)
+- Addional shortcodes
 
 # Installation
 
@@ -124,6 +127,19 @@ Includes images and opens them in a new tab when clicked:
 {{< img "photo.png" "What a lovely picture" >}}
 ```
 
+### Get URL to an image
+Creates a link to the given image
+```
+{{< imgUrl "photo.png" "link text" >}}
+```
+
+### Embed scaled image
+Scales an image to the given size and embeds it like the shortcode `img` does.
+```
+{{< imgUrl "photo.png" "What a lovely picture" "500x" >}}
+```
+(This image is scaled to 500 pixels in width, the height is determined automatically)
+
 ## Multiple authors
 This theme will read the information of an author based on the language code of a page.
 
@@ -144,10 +160,3 @@ You can use the above configuration with e.g. Google Analytics or use your own J
 For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (if it exists) will be embedded into the header right before the `</head>` tag.
 
 I tested this with the Matomo analytics software, which provides a JavaScript snipped I put into the `tracking.html`.
-
-### Temporarily
-Use the normal hugo `-t` option to specify the theme:
-
-`hugo server -t hamburg`
-
-The theme must be available in the `./themes/hamburg/` folder.
