@@ -14,8 +14,10 @@
   other = "Weiter lesen"
 [contactMe]
   other = "Schreibe mir"
-[dateformat]
+[dateTimeFormat]
   other = "02.01.2006 um 15:04"
+[dateFormat]
+  other = "02.01.2006"
 [allTags]
   other = "Alle Tags"
 [gdprNotice]

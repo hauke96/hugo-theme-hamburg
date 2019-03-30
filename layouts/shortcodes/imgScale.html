@@ -1,0 +1,30 @@
+{{ $imageName := (index .Params 0)}}
+{{ $subtitle := (index .Params 1)}}
+{{ $newSize := (index .Params 2) }}
+
+<!-- Try to find image locally in the posts folder -->
+{{ $originalImage := .Page.Resources.GetMatch $imageName }}
+
+<!-- Try to find image from "/images" folder -->
+{{ if not $originalImage}}
+	{{ $imagesPage := .Site.GetPage "/images" }}
+	{{ $originalImage = $imagesPage.Resources.GetMatch $imageName }}
+{{ end }}
+
+{{ .Scratch.Set "image" ($originalImage.Resize $newSize) }}
+{{ $scaledImage := .Scratch.Get "image" }}
+
+<figure>
+	<a href={{ $originalImage.Permalink }} target="_blank">
+		<center>
+			<img class="embedded-image" src={{ $scaledImage.Permalink }}>
+		</center>
+	</a>
+	<figcaption>
+		<h4>
+			<center>
+				{{ $subtitle }}
+			</center>
+		</h4>
+	</figcaption>
+</figure>

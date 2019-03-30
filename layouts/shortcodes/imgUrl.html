@@ -1,0 +1,15 @@
+{{ $imageName := (index .Params 0) }}
+{{ $linkText := (index .Params 1) }}
+
+<!-- Try to find image locally in the posts folder -->
+{{ $image := .Page.Resources.GetMatch $imageName }}
+
+<!-- Try to find image from "/images" folder -->
+{{ if not $image}}
+	{{ $imagesPage := .Site.GetPage "/images" }}
+	{{ $image = $imagesPage.Resources.GetMatch $imageName }}
+{{ end }}
+
+<a href={{ $image.Permalink }} target="_blank">
+	{{ $linkText }}
+</a>
