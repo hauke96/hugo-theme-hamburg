@@ -19,7 +19,7 @@
 	<figcaption>
 		<h4>
 			<center>
-				{{ $subtitle }}
+				{{ $subtitle }} ({{ printf "%.*f" 2 (div (len $image.Content) 1000000.0) }}MB)
 			</center>
 		</h4>
 	</figcaption>
