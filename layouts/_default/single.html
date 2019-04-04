@@ -72,6 +72,10 @@
         </section>
       {{ end }}
     <div class="delimiter"></div>
+    <h2 class="text-primary">Kommentare</h2>
+    <div id="commento"></div>
+    <script src="https://cdn.commento.io/js/commento.js"></script>
+    <div class="delimiter"></div>
     <div class="pager-container">
       {{ if .Next }}
         <a class="btn btn-primary btn-older-posts" href="{{ .Next.Permalink }}">
