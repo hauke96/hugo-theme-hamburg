@@ -1,0 +1,5 @@
+{{ $note := (index .Params 0) }}
+
+<div class="note note-border">
+	{{ $note | markdownify }}
+</div>

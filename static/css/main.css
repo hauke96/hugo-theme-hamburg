@@ -274,6 +274,12 @@ article section img {
     border-radius: 0px;
 }
 
+blockquote {
+	padding: 20px;
+	margin: 15px 0px;
+	font-size: unset;
+}
+
 /*
 XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
 .btn, .btn-primary, a.btn-default, a {
@@ -346,4 +352,10 @@ I don't use the default pager-class because I want to use the normal buttons wit
 /* Images */
 .embedded-image {
 	padding: 5px;
+}
+
+/* Note box */
+.note {
+	padding: 20px;
+	margin: 15px 0px;
 }
