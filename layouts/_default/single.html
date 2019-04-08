@@ -28,22 +28,6 @@
     </div>
   </div>
   <footer>
-    {{ if (isset .Params "nocomments")  }}
-    {{ else }}
-      {{ with .Site.Params.disqus }}
-        <div class="delimiter"></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = '{{ . }}';
-          (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      {{ end }}
-    {{ end }}
     {{ if and (isset $data "authors") (isset .Params "author") }}
       {{ $author := index $data.authors .Params.author }}
         <div class="delimiter"></div>
@@ -71,10 +55,26 @@
           </div>
         </section>
       {{ end }}
-    <div class="delimiter"></div>
-    <h2 class="text-primary">Kommentare</h2>
-    <div id="commento"></div>
-    <script src="https://cdn.commento.io/js/commento.js"></script>
+	{{ if .Site.Params.UseCommento }}
+	  <div class="delimiter"></div>
+	  <h2 class="text-primary">Kommentare</h2>
+	  <div id="commento"></div>
+	  <script src="https://cdn.commento.io/js/commento.js"></script>
+    {{ else if (isset .Site.Params "disqus") }}
+      {{ with .Site.Params.disqus }}
+        <div class="delimiter"></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = '{{ . }}';
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      {{ end }}
+    {{ end }}
     <div class="delimiter"></div>
     <div class="pager-container">
       {{ if .Next }}
