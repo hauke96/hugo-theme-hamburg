@@ -157,6 +157,6 @@ To support multiple languages, create multiple directories in the `data` directo
 ## Tracking
 You can use the above configuration with e.g. Google Analytics or use your own JavaScript snippet to do so.
 
-For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (if it exists) will be embedded into the header right before the `</head>` tag.
+For a custom JavaScript snippet you have to create a `layouts/partials/tracking.html` file and put the necessary code into this file. The file (if it exists) will be embedded into the footer next to the other tracking mechanisms.
 
-I tested this with the Matomo analytics software, which provides a JavaScript snipped I put into the `tracking.html`.
+I tested this with the Matomo analytics software, which provides a JavaScript or image-based snipped that I put into the `tracking.html`.
