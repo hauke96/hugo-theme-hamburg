@@ -305,8 +305,6 @@ I don't use the default pager-class because I want to use the normal buttons wit
 }
 
 .delimiter {
-    margin-left: -20px;
-    margin-right: -20px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
