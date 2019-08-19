@@ -45,6 +45,9 @@ theme = "hamburg"
     customCSS = ['hamburg.css']
     # Show this very user-friendly and absolutely not annoying GDPR notice at the bottom of the page
     ShowGDPRNotice = true
+	subtitle = "The great example site of the hugo-hamburg-theme"
+	# Since 0.57.0 there's the concept of "main sections". The files for the section "posts" are in "./content/posts/".
+	mainSections = ["posts"]
 
 [languages]
     [languages.en]
@@ -71,7 +74,7 @@ theme = "hamburg"
 ```
 
 ### Additional `vienna`-theme params
-There're some other params from the [original vienna theme](https://github.com/keichi/vienna) I've not used so far. They probably work, but there's no guarantee:
+There're some other params from the [original vienna theme](https://github.com/keichi/vienna) I've not used so far. Most of them might **not work** anymore, so there's no guarantee:
 ```toml
 [params]
     # Social accounts. Link to these accounts are displayed in the header and
