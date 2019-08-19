@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <section class="article-list">
   <h1>{{ .Title }}</h1>
-  {{ range .Data.Pages }}
+  {{ range .Pages }}
     <div class="delimiter"></div>
     {{ .Render "li" }}
   {{ end }}
