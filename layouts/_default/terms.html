@@ -3,7 +3,7 @@
   <h1>{{ .Title }}</h1>
   {{ $data := .Data }}
   <div class="list-group">
-    {{ range $key, $value := .Data.Pages }}
+	{{ range $key, $value := .Pages }}
       <a class="list-group-item" href="{{ $value.URL }}">
         {{ $value.Name }}
       </a>

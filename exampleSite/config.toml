@@ -14,3 +14,4 @@ theme = "hamburg"
 
 [params]
 	subtitle = "The great example site of the hugo-hamburg-theme"
+	mainSections = ["posts"]

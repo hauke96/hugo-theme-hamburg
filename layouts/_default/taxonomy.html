@@ -6,7 +6,7 @@
       {{ i18n "allTags" }}
     </a>
   </div>
-  {{ range .Data.Pages }}
+  {{ range .Pages }}
     <div class="delimiter"></div>
     {{ .Render "li" }}
   {{ end }}
