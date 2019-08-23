@@ -4,9 +4,9 @@ Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/) based on 
 
 # Screenshots
 
-![Beautiful on desktop devices][images/website_desktop.png]
+![Beautiful on desktop devices][https://github.com/hauke96/hugo-theme-hamburg/blob/dev/images/website_desktop.png]
 
-![Also beautiful on mobile devices][images/website_mobile.png]
+![Also beautiful on mobile devices][https://github.com/hauke96/hugo-theme-hamburg/blob/dev/images/website_mobile.png]
 
 # Overview
 
