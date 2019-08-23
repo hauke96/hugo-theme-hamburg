@@ -2,6 +2,12 @@
 
 Hamburg is a simple and clean blog theme for [Hugo](http://gohugo.io/) based on the [vienna-theme](https://github.com/keichi/vienna) from [keichi](https://github.com/keichi).
 
+# Screenshots
+
+![Beautiful on desktop devices][images/website_desktop.png]
+
+![Also beautiful on mobile devices][images/website_mobile.png]
+
 # Overview
 
 Notable features I would tell somebody are:
