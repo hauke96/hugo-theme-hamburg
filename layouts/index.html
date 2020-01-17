@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 <div class="article-list">
-  {{ range $index, $page := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ range $index, $page := $paginator.Pages }}
     {{ if ne $index 0 }}
       <div class="delimiter"></div>
     {{ end }}
