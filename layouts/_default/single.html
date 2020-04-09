@@ -77,7 +77,7 @@
     {{ end }}
     <div class="delimiter"></div>
     <div class="pager-container">
-      {{ with .Prev }}
+      {{ with .PrevInSection }}
         <a class="btn btn-primary btn-older-posts" href="{{ .Permalink }}">
           <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
@@ -90,7 +90,7 @@
           </div>
         </a>
       {{ end }}
-      {{ with .Next }}
+      {{ with .NextInSection }}
         <a class="btn btn-primary btn-newer-posts" href="{{ .Permalink }}">
           <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
