@@ -4,7 +4,7 @@
   {{ $data := .Data }}
   <div class="list-group">
 	{{ range $key, $value := .Pages }}
-      <a class="list-group-item" href="{{ $value.URL }}">
+      <a class="list-group-item" href="{{ $value.Permalink }}">
         {{ $value.Name }}
       </a>
     {{ end }}
