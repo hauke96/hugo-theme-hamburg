@@ -189,8 +189,20 @@ main {
     margin-bottom: 6px;
 }
 
-.read-more-container {
-    margin-top: 10px;
+.li-content {
+    display: flex;
+}
+
+.li-content img {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* Tag list */

@@ -10,20 +10,25 @@
       </div>
     </div>
   </header>
-  <div>
-    {{ if (isset .Params "summary") }}
-      {{ markdownify .Params.Summary }}
-    {{ else }}
-      {{ .Summary }}
-    {{ end }}
-  </div>
-  <footer>
-    <div class="read-more-container">
-      <a class="btn btn-primary" href="{{ .Permalink }}">
-        <div>
+
+  {{ if (isset .Params "summary") }}
+    <div class="li-content">
+      <div class="summary-container">
+        <p>{{ markdownify .Params.Summary }}</p>
+        <a class="btn btn-primary" href="{{ .Permalink }}">
           {{ i18n "readMore" }} <span aria-hidden="true">&rarr;</span>
-        </div>
-      </a>
+        </a>
+      </div>
+      {{ if (isset .Params "images") }}
+        <a href="{{ .Permalink }}">
+          <img class="embedded-image" src="{{ index .Params.images 0 | absLangURL }}"/>
+        </a>
+      {{ end }}
     </div>
-  </footer>
+  {{ else }}
+    <div>
+        NOT FOUND
+      {{ .Summary }}
+    </div>
+  {{ end }}
 </article>
