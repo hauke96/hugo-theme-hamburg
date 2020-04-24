@@ -11,7 +11,7 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ with .Params.images }}
     {{ range first 5 . }}
-      <meta property="og:image" content="{{ . }}" />
+      <meta property="og:image" content="{{ . | absLangURL }}" />
     {{ end }}
   {{ end }}
   {{ if .IsPage }}

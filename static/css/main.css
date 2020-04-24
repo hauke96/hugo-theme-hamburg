@@ -7,6 +7,7 @@ main {
 
 .global-header {
     background-size: cover;
+    background-position-x: center;
     min-height: 350px;
 }
 
@@ -139,6 +140,7 @@ main {
 }
 
 .post-tag a {
+    margin-left: 10px;
     padding: 0 10px;
     border-radius: 12px;
     text-decoration: none;
@@ -188,8 +190,21 @@ main {
     margin-bottom: 6px;
 }
 
-.read-more-container {
-    margin-top: 10px;
+.li-content {
+    display: flex;
+}
+
+.li-content img {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.summary-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* Tag list */
