@@ -14,7 +14,7 @@
   {{ if (isset .Params "summary") }}
     <div class="li-content">
       <div class="summary-container">
-        <p>{{ markdownify .Params.Summary }}</p>
+        <p>{{ .Params.Summary | .Page.RenderString }}</p>
         <a class="btn btn-primary" href="{{ .Permalink }}">
           {{ i18n "readMore" }} <span aria-hidden="true">&rarr;</span>
         </a>
