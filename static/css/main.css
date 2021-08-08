@@ -376,6 +376,7 @@ I don't use the default pager-class because I want to use the normal buttons wit
 /* Table */
 table {
     width: 100%;
+	margin: 15px 0px;
 }
 
 table, th, td {
