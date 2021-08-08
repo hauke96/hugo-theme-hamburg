@@ -164,3 +164,8 @@ blockquote {
 	border: 1px solid #dcedc8;
 	border-left: 3px solid #9ccc65;
 }
+
+/* Table */
+table, th, td {
+    border: 1px solid #bdbdbd;
+}
