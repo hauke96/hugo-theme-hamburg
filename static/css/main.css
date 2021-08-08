@@ -372,3 +372,14 @@ I don't use the default pager-class because I want to use the normal buttons wit
 	padding: 20px;
 	margin: 15px 0px;
 }
+
+/* Table */
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
