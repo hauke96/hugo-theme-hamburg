@@ -77,6 +77,8 @@
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       {{ end }}
     {{ end }}
+   {{ if (isset .Params "nopagination")  }}
+    {{ else }}
     <div class="delimiter"></div>
     <div class="pager-container">
       {{ with .PrevInSection }}
@@ -105,6 +107,7 @@
           </div>
         </a>
       {{ end }}
+     {{ end }}    
     </div>
   </footer>
 </article>
