@@ -12,6 +12,10 @@ From material design color palette:
 #000000 - Black
 */
 
+body {
+    color: #333333;
+}
+
 /* pure colors for hamburg-theme foreign HTML documents */
 .primary-color-very-light {
 	color: #dcedc8;
@@ -31,15 +35,6 @@ From material design color palette:
 
 .gray-very-dark {
 	color: #424242;
-}
-
-/*
-...1B - 10% transparent
-...4D - 30% transparent
-...80 - 50% transparent
-*/
-.delimiter{
-    border-bottom: 1px solid #0000001B;
 }
 
 .header-text {

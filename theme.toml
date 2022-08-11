@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/hauke96/hugo-theme-hamburg/blob/master/LICENSE.md"
 description = "Simple and clean blog theme for hugo"
 homepage = "https://github.com/hauke96/hugo-theme-hamburg"
-tags = ["blog", "tags", "bootstrap", "multilingual", "clean", "minimal", "disqus", "font awesome", "mobile"]
+tags = ["blog", "tags", "multilingual", "clean", "minimal", "disqus", "font awesome", "mobile"]
 repo = "https://github.com/hauke96/hugo-theme-hamburg"
 min_version = "0.62"
 

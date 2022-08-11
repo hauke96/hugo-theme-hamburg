@@ -1,6 +1,20 @@
-main {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+	font-size: 17px;
+	line-height: 1.58823529;
+	margin: 0;
+}
+
+.container {
     max-width: 750px;
     word-wrap: break-word;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 15px;
 }
 
 /* Header */
@@ -37,11 +51,6 @@ main {
 
 .header-text h1 a {
     text-decoration: none;
-}
-
-.btn-home {
-    position: absolute;
-    left: 20px;
 }
 
 /* Navbar */
@@ -81,7 +90,7 @@ main {
 }
 
 @media (min-width: 900px) {
-  .language-container, .btn-home {
+  .language-container {
     top: 20px;
   }
 }
@@ -160,11 +169,17 @@ main {
 }
 
 .author-info {
+    display: flex;
+	flex-direction: row;
     overflow: auto;
 }
 
 .author-name {
     margin: 0 0 5px 0;
+}
+
+.author-avatar {
+	margin-right: 25px;
 }
 
 .author-avatar img {
@@ -176,6 +191,10 @@ main {
 
 .author-contact {
     margin-top: 10px;
+}
+
+.author-meta {
+    flex-grow: 1;
 }
 
 /* Article list */
@@ -207,6 +226,14 @@ main {
     align-items: flex-start;
 }
 
+/* Clearfix */
+
+.clearfix {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 /* Tag list */
 
 #container-tags-title {
@@ -223,29 +250,35 @@ main {
 
 /* Bootstrap adjustions */
 
-h1,
-.h1 {
+h1 {
   font-size: 36px;
 }
-h2,
-.h2 {
+h2 {
   font-size: 30px;
 }
-h3,
-.h3 {
+h3 {
   font-size: 24px;
 }
-h4,
-.h4 {
+h4 {
   font-size: 18px;
 }
-h5,
-.h5 {
+h5 {
   font-size: 14px;
 }
-h6,
-.h6 {
+h6 {
   font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 300;
+	line-height: 1.1;
+}
+h1, h2, h3 {
+    margin-top: 26px;
+	margin-bottom: 13px;
+}
+h4, h5, h6 {
+    margin-top: 13px;
+	margin-bottom: 13px;
 }
 
 pre {
@@ -262,16 +295,30 @@ blockquote {
      font-style:italic;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Source Sans Pro", "Kozuka Gothic Pr6N", Meiryo, sans-serif !important;
+p {
+	margin-top: 0;
+    margin-bottom: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    margin-top: 0;
+	margin-bottom: 13px;
 }
 
 small, .small {
   font-size: 80%;
 }
 
-a > .btn:hover {
-  text-decoration: none;
+sup {
+    top: -0.5em;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 article section img {
@@ -280,13 +327,8 @@ article section img {
     margin: 13px auto;
 }
 
-.btn {
-    font-size: 13px;
-    line-height: 1.58823529;
-    /*
-    XXX Specify a radius for the buttons here
-    */
-    border-radius: 0px;
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
 }
 
 blockquote {
@@ -295,19 +337,15 @@ blockquote {
 	font-size: unset;
 }
 
-/*
-XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
-.btn, .btn-primary, a.btn-default, a {
-    transition: all 0.1s linear;
-}
-*/
-
-.btn-older-posts {
-    float: left;
+figure {
+    margin: 0;
 }
 
-.btn-newer-posts {
-    float: right;
+hr {
+    margin: 20px 0;
+	border: none;
+	border-top: 1px solid #0000001B;
+	height: 0;
 }
 
 /*
@@ -317,11 +355,6 @@ I don't use the default pager-class because I want to use the normal buttons wit
 */
 .pager-container {
     overflow: auto;
-}
-
-.delimiter {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .pagination {
@@ -365,6 +398,7 @@ I don't use the default pager-class because I want to use the normal buttons wit
 /* Images */
 .embedded-image {
 	padding: 5px;
+	vertical-align: middle;
 }
 
 /* Note box */
@@ -383,4 +417,5 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px;
+	text-align: left;
 }

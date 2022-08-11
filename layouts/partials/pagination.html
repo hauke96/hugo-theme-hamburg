@@ -1,5 +1,5 @@
 {{ if or .HasPrev .HasNext }}
-  <div class="delimiter"></div>
+  <hr>
   <nav class="pagination" role="navigation">
     {{ if .HasNext }}
       <a class="btn btn-primary btn-older-posts" href="{{ .Next.URL }}">

@@ -3,7 +3,7 @@
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
   {{ range $index, $page := $paginator.Pages }}
     {{ if ne $index 0 }}
-      <div class="delimiter"></div>
+      <hr>
     {{ end }}
     {{ .Render "li" }}
   {{ end }}
