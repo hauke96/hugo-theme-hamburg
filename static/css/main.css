@@ -309,6 +309,13 @@ ul, ol {
 	margin-bottom: 13px;
 }
 
+ul ol,
+ol ul,
+ol ol,
+ul ul {
+	margin-bottom: 0;
+}
+
 small, .small {
   font-size: 80%;
 }
