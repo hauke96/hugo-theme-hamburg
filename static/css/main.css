@@ -291,10 +291,6 @@ pre code {
     word-wrap: normal;
 }
 
-blockquote {
-     font-style:italic;
-}
-
 p {
 	margin-top: 0;
     margin-bottom: 13px;
@@ -342,6 +338,11 @@ blockquote {
 	padding: 20px;
 	margin: 15px 0px;
 	font-size: unset;
+    font-style:italic;
+}
+
+blockquote p {
+    margin-bottom: 0;
 }
 
 figure {
