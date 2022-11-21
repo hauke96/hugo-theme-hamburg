@@ -13,7 +13,7 @@ From material design color palette:
 */
 
 body {
-    color: #333333;
+	color: #333333;
 }
 
 /* pure colors for hamburg-theme foreign HTML documents */
@@ -38,41 +38,41 @@ body {
 }
 
 .header-text {
-    background-color: #0000004d;
-    color: #fff;
+	background-color: #0000004d;
+	color: #fff;
 }
 
 .header-text .tag-line {
-    color: #fff;
+	color: #fff;
 }
 
 .header-text h1 a {
-    color: #fff;
+	color: #fff;
 }
 
 /* The social-icons */
 .global-footer .sns-links a {
-    border: 1px solid #757575;
-    color: #757575;
+	border: 1px solid #757575;
+	color: #757575;
 }
 
 .global-footer .sns-links a:hover {
-    border: 1px solid #558b2f;
-    color: #558b2f;
+	border: 1px solid #558b2f;
+	color: #558b2f;
 }
 
 /* The whole footer-area */
 .global-footer {
-    color: #757575;
+	color: #757575;
 }
 
 .post-date {
-    color: #757575;
+	color: #757575;
 }
 
 a:hover,
 a:focus {
-    color: #558b2f;
+	color: #558b2f;
 }
 
 /* Tags of articles and pages */
@@ -86,39 +86,39 @@ a:focus {
 }
 
 .not-found h1 {
-    color: #757575;
+	color: #757575;
 }
 
 .author-bio {
-    color: #757575;
+	color: #757575;
 }
 
 /* Color for e.g. headers and links */
 .text-primary, a {
-    color: #558b2f;
+	color: #558b2f;
 }
 
 /* Primary buttons are the ones in the page (not in the header) */
 .btn-primary {
-    background-color: transparent;
-    border-color: #558b2f;
-    color: #558b2f;
+	background-color: transparent;
+	border-color: #558b2f;
+	color: #558b2f;
 }
 
 .btn-primary:focus,
 .btn-primary:hover {
-    color: #558b2f;
-    background-color: #dcedc8;
-    border-color: #558b2f;
+	color: #558b2f;
+	background-color: #dcedc8;
+	border-color: #558b2f;
 }
 
 .btn-primary.disabled,
 .btn-primary.disabled:focus,
 a.btn-primary.disabled,
 a.btn-primary.disabled:focus {
-    color: #757575;
-    background-color: #fff;
-    border-color: #bdbdbd;
+	color: #757575;
+	background-color: #fff;
+	border-color: #bdbdbd;
 }
 
 /* Default buttons are the ones in the header */
@@ -130,9 +130,9 @@ a.btn-primary.disabled:focus {
 
 .btn-default:focus,
 .btn-default:hover {
-    color: #fff;
-    background-color: #bdbdbd4d;
-    border-color: #fff;
+	color: #fff;
+	background-color: #bdbdbd4d;
+	border-color: #fff;
 }
 
 .info {
@@ -141,12 +141,12 @@ a.btn-primary.disabled:focus {
 }
 
 .embedded-image {
-    border: 1px solid #dcedc8;
+	border: 1px solid #dcedc8;
 }
 
 .embedded-image:hover,
 .embedded-image:focus {
-    border: 1px solid #9ccc65;
+	border: 1px solid #9ccc65;
 }
 
 /* Bootstrap adjustions */
@@ -162,5 +162,5 @@ blockquote {
 
 /* Table */
 table, th, td {
-    border: 1px solid #bdbdbd;
+	border: 1px solid #bdbdbd;
 }

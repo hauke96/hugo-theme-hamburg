@@ -1,17 +1,17 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: 17px;
 	line-height: 1.58823529;
 	margin: 0;
 }
 
 .container {
-    max-width: 750px;
-    word-wrap: break-word;
+	max-width: 750px;
+	word-wrap: break-word;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 15px;
@@ -20,162 +20,162 @@ body {
 /* Header */
 
 .global-header {
-    background-size: cover;
-    background-position-x: center;
-    min-height: 350px;
+	background-size: cover;
+	background-position-x: center;
+	min-height: 350px;
 }
 
 .header-text {
-    position: relative;
-    min-height: inherit;
+	position: relative;
+	min-height: inherit;
 }
 
 .header-text .tag-line {
-    margin: 25px auto;
-    padding: 0 10px;
-    max-width: 430px;
-    text-align: center;
-    font-weight: 200;
+	margin: 25px auto;
+	padding: 0 10px;
+	max-width: 430px;
+	text-align: center;
+	font-weight: 200;
 }
 
 .header-text h1 {
-    margin: 0 auto;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
-    font-weight: 100;
-    font-size: 52px;
-    border-bottom: 1px solid;
-    max-width: 550px;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 52px;
+	border-bottom: 1px solid;
+	max-width: 550px;
 }
 
 .header-text h1 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /* Navbar */
 
 .navbar-container {
-    display: flex;
-    flex-direction: row-reverse;
-    position: absolute;
-    /* right: 20px; */
-    bottom: 20px;
-    width: 100%;
-    justify-content: center;
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	/* right: 20px; */
+	bottom: 20px;
+	width: 100%;
+	justify-content: center;
 }
 
 .navbar-item {
-    margin-left: 20px;
-    position: initial !important;
+	margin-left: 20px;
+	position: initial !important;
 }
 
 .navbar-item:last-child {
-    margin-left: 0px;
+	margin-left: 0px;
 }
 
 /* Language list */
 
 .language-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: absolute;
-    right: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	position: absolute;
+	right: 20px;
 }
 
 .language-button {
-    margin-left: 5px;
-    position: initial !important;
+	margin-left: 5px;
+	position: initial !important;
 }
 
 @media (min-width: 900px) {
   .language-container {
-    top: 20px;
+	top: 20px;
   }
 }
 
 /* Footer */
 
 .global-footer {
-    padding-top: 10px;
-    max-width: 750px;
-    height: 100px;
+	padding-top: 10px;
+	max-width: 750px;
+	height: 100px;
 }
 
 .global-footer .sns-links {
-    float: right;
+	float: right;
 }
 
 .global-footer .sns-links a {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 12px;
-    vertical-align: top;
-    text-align: center;
-    text-decoration: none;
-    font-size: 13px;
-    /*
-    XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
-    transition: color,border-color 0.1s linear;
-    */
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	vertical-align: top;
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color,border-color 0.1s linear;
+	*/
 }
 
 .global-footer .sns-links a i {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 /* Article */
 
 .article-list h2 a {
-    text-decoration: none;
-    /*
-    XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
-    transition: color 0.1s linear;
-    */
+	text-decoration: none;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color 0.1s linear;
+	*/
 }
 
 .article-title {
-    position: relative;
+	position: relative;
 }
 
 .article-title h1 {
-    font-size: 44px;
+	font-size: 44px;
 }
 
 .article-title * {
-    text-align: center;
+	text-align: center;
 }
 
 .post-tag a {
-    margin-left: 10px;
-    padding: 0 10px;
-    border-radius: 12px;
-    text-decoration: none;
-    /*
-    XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
-    transition: color,border-color,background-color 0.1s linear;
-    */
+	margin-left: 10px;
+	padding: 0 10px;
+	border-radius: 12px;
+	text-decoration: none;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color,border-color,background-color 0.1s linear;
+	*/
 }
 
 .not-found h1 {
-    font-weight: 200;
-    font-size: 80px;
+	font-weight: 200;
+	font-size: 80px;
 }
 
 .not-found {
-    text-align: center;
+	text-align: center;
 }
 
 .author-info {
-    display: flex;
+	display: flex;
 	flex-direction: row;
-    overflow: auto;
+	overflow: auto;
 }
 
 .author-name {
-    margin: 0 0 5px 0;
+	margin: 0 0 5px 0;
 }
 
 .author-avatar {
@@ -183,53 +183,53 @@ body {
 }
 
 .author-avatar img {
-    max-width: 100px;
-    max-height: 100px;
-    width: 100px;
-    height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+	width: 100px;
+	height: 100px;
 }
 
 .author-contact {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .author-meta {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 /* Article list */
 
 .li-h1 {
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
 
 .li-small {
-    font-size: 70%;
-    margin-top: 3px;
-    margin-bottom: 6px;
+	font-size: 70%;
+	margin-top: 3px;
+	margin-bottom: 6px;
 }
 
 .li-content {
-    display: flex;
+	display: flex;
 }
 
 .li-content img {
-    width: 250px;
-    margin-left: 20px;
+	width: 250px;
+	margin-left: 20px;
 }
 
 .summary-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 /* Clearfix */
 
 .clearfix {
-    display: flex;
+	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
@@ -237,12 +237,12 @@ body {
 /* Tag list */
 
 #container-tags-title {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 #btn-all-tags {
-    align-self: flex-end;
-    margin-bottom: 13px;
+	align-self: flex-end;
+	margin-bottom: 13px;
 }
 .list-group-item {
   border-radius: 0px !important;
@@ -273,35 +273,35 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	line-height: 1.1;
 }
 h1, h2, h3 {
-    margin-top: 26px;
+	margin-top: 26px;
 	margin-bottom: 13px;
 }
 h4, h5, h6 {
-    margin-top: 13px;
+	margin-top: 13px;
 	margin-bottom: 13px;
 }
 
 pre {
-    font-size: 13px;
+	font-size: 13px;
 }
 
 pre code {
-    overflow: auto;
-    white-space: pre;
-    word-wrap: normal;
+	overflow: auto;
+	white-space: pre;
+	word-wrap: normal;
 }
 
 p {
 	margin-top: 0;
-    margin-bottom: 13px;
+	margin-bottom: 13px;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 ul, ol {
-    margin-top: 0;
+	margin-top: 0;
 	margin-bottom: 13px;
 }
 
@@ -317,7 +317,7 @@ small, .small {
 }
 
 sup {
-    top: -0.5em;
+	top: -0.5em;
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
@@ -325,32 +325,32 @@ sup {
 }
 
 article section img {
-    max-width: 100%;
-    height: auto;
-    margin: 13px auto;
+	max-width: 100%;
+	height: auto;
+	margin: 13px auto;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
+	display: block;
 }
 
 blockquote {
 	padding: 20px;
 	margin: 15px 0px;
 	font-size: unset;
-    font-style:italic;
+	font-style:italic;
 }
 
 blockquote p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 figure {
-    margin: 0;
+	margin: 0;
 }
 
 hr {
-    margin: 20px 0;
+	margin: 20px 0;
 	border: none;
 	border-top: 1px solid #0000001B;
 	height: 0;
@@ -362,24 +362,24 @@ Paging at the bottom
 I don't use the default pager-class because I want to use the normal buttons with my style
 */
 .pager-container {
-    overflow: auto;
+	overflow: auto;
 }
 
 .pagination {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-radius: unset;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	border-radius: unset;
 }
 
 .info {
-    position: fixed;
-    bottom:0%;
-    width:100%;
-    padding: 10px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+	position: fixed;
+	bottom:0%;
+	width:100%;
+	padding: 10px;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
 }
 
 .info-content {
@@ -389,17 +389,17 @@ I don't use the default pager-class because I want to use the normal buttons wit
 
 @media (min-width: 768px) {
   .info-content {
-    width: 750px;
+	width: 750px;
   }
 }
 @media (min-width: 992px) {
   .info-content {
-    width: 970px;
+	width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .info-content {
-    width: 1170px;
+	width: 1170px;
   }
 }
 
@@ -417,13 +417,13 @@ I don't use the default pager-class because I want to use the normal buttons wit
 
 /* Table */
 table {
-    width: 100%;
+	width: 100%;
 	margin: 15px 0px;
 }
 
 table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
 	text-align: left;
 }

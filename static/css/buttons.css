@@ -1,12 +1,12 @@
 .btn {
-    display: inline-block;
-    font-size: 13px;
+	display: inline-block;
+	font-size: 13px;
 	border: 1px solid #ffffff;
 	padding: 6px 12px;
 }
 
 .btn:hover {
-    background-color: #bdbdbd4d;
+	background-color: #bdbdbd4d;
 }
 
 a > .btn:hover {
@@ -16,24 +16,24 @@ a > .btn:hover {
 /*
 XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
 .btn, .btn-primary, a.btn-default, a {
-    transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }
 */
 
 .btn-older-posts {
-    float: left;
+	float: left;
 }
 
 .btn-newer-posts {
-    float: right;
+	float: right;
 }
 
 .btn-home {
-    position: absolute;
-    left: 20px;
+	position: absolute;
+	left: 20px;
 }
 @media (min-width: 900px) {
   .btn-home {
-    top: 20px;
+	top: 20px;
   }
 }
