@@ -4,16 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
+  
   {{ with .Site.Params.themecolor }}
     <meta name="theme-color" content="{{ . }}" />
   {{ end }}
+  
   <meta property="og:site_name" content="{{ .Site.Title }}" />
+
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+  {{ else if .IsPage }}
+    <meta name="description" content="{{ .Summary | plainify }}">
+  {{ end }}
+
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ with .Params.images }}
     {{ range first 5 . }}
       <meta property="og:image" content="{{ . | absLangURL }}" />
     {{ end }}
   {{ end }}
+  
   {{ if .IsPage }}
     <meta property="og:type" content="article" />
     {{ with .Site.Params.facebook }}
@@ -31,10 +41,9 @@
     {{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
   </title>
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/buttons.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/color-theme.css" />
+  {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" }}
+  <link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
+
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
   <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/apple-touch-icon.png" />
