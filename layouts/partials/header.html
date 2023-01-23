@@ -44,7 +44,8 @@
   {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" }}
   <link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
 
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <!-- Deactivate this due to possible problems with the GDPR -->
+  <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css"> -->
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" />
   <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
 
