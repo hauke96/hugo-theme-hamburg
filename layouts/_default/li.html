@@ -21,7 +21,7 @@
       </div>
       {{ if (isset .Params "images") }}
         <a href="{{ .Permalink }}">
-          <img class="embedded-image" src="{{ index .Params.images 0 | absLangURL }}"/>
+          <img class="embedded-image" alt="{{ .Title }}" src="{{ index .Params.images 0 | absLangURL }}"/>
         </a>
       {{ end }}
     </div>
