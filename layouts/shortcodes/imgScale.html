@@ -11,6 +11,11 @@
 	{{ $originalImage = $imagesPage.Resources.GetMatch $imageName }}
 {{ end }}
 
+<!-- Try to find image from "/assets" folder -->
+{{ if not $originalImage}}
+	{{ $originalImage = resources.Get $imageName }}
+{{ end }}
+
 {{ .Scratch.Set "image" ($originalImage.Resize $newSize) }}
 {{ $scaledImage := .Scratch.Get "image" }}
 

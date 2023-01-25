@@ -21,6 +21,7 @@
       </div>
       {{ if (isset .Params "images") }}
         <a href="{{ .Permalink }}">
+          <!-- May work when all images are in the assets/ folder: $image := partial "getScaledImage.html" . !-->
           <img class="embedded-image" alt="{{ .Title }}" src="{{ index .Params.images 0 | absLangURL }}"/>
         </a>
       {{ end }}
