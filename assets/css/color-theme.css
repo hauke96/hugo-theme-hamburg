@@ -135,11 +135,6 @@ a.btn-primary.disabled:focus {
 	border-color: #fff;
 }
 
-.info {
-  background-color: #424242;
-  color: #fff;
-}
-
 .embedded-image {
 	border: 1px solid #dcedc8;
 }

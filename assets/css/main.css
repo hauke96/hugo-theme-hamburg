@@ -124,7 +124,8 @@ main {
 	padding: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 100%;
+	width: 750px;
+	max-width: 100%;
 }
 
 .global-footer .sns-links {
@@ -403,22 +404,6 @@ I don't use the default pager-class because I want to use the normal buttons wit
 	justify-content: space-between;
 	margin-bottom: 20px;
 	border-radius: unset;
-}
-
-.info {
-	position: fixed;
-	bottom:0%;
-	width:100%;
-	padding: 10px;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-}
-
-.info-content {
-  margin: auto;
-  padding: 10px;
-  max-width: 750px;
 }
 
 /* Images */
