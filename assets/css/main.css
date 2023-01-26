@@ -278,28 +278,28 @@ main {
 	margin-bottom: 13px;
 }
 .list-group-item {
-  border-radius: 0px !important;
+	border-radius: 0px !important;
 }
 
 /* Bootstrap adjustions */
 
 h1 {
-  font-size: 36px;
+	font-size: 36px;
 }
 h2 {
-  font-size: 30px;
+	font-size: 30px;
 }
 h3 {
-  font-size: 24px;
+	font-size: 24px;
 }
 h4 {
-  font-size: 18px;
+	font-size: 18px;
 }
 h5 {
-  font-size: 14px;
+	font-size: 14px;
 }
 h6 {
-  font-size: 12px;
+	font-size: 12px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: 300;
@@ -346,7 +346,7 @@ ul ul {
 }
 
 small, .small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 sup {
