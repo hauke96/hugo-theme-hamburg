@@ -20,3 +20,5 @@
   other = "Jan 2, 2006"
 [allTags]
   other = "All tags"
+[showCompleteMap]
+  other = "Show complete map"

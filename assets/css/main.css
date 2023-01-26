@@ -93,14 +93,6 @@ main {
 	top: 20px;
 }
 
-/*
-@media (min-width: 900px) {
-  .language-container {
-	top: 20px;
-  }
-}
-*/
-
 @media (max-width: 750px) {
 	.global-header {
 		min-height: 250px;
@@ -463,4 +455,9 @@ table, th, td {
 	border-collapse: collapse;
 	padding: 5px;
 	text-align: left;
+}
+
+/* Map */
+.show-complete-map-link {
+	margin-bottom: 10px;
 }

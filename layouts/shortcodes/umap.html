@@ -1,0 +1,16 @@
+<!-- Without protocol, so just "//umap.openstree......" but without parameters -->
+{{ $url := (index .Params 0) }}
+
+<!-- Parameters from the URL, e.g. "11/63.75/-19.35" -->
+{{ $params := (index .Params 1) }}
+
+<iframe
+	width="100%"
+	height="500px"
+	frameborder="0"
+	allowfullscreen
+	src="{{ printf "%s#%s" $url $params }}">
+</iframe>
+<a class="show-complete-map-link" target="_blank" href="{{ $url }}">
+	{{ i18n "showCompleteMap" }}
+</a>
