@@ -1,0 +1,30 @@
+<!-- Use the given context from the parameters if available -->
+{{ $ctx := . }}
+{{ if .ctx }}
+	{{ $ctx = .ctx }}
+{{ end }}
+
+{{ $result := dict }}
+
+<!-- Try to find image locally in the posts folder -->
+{{ $originalImage := $ctx.Page.Resources.GetMatch .imageName }}
+
+<!-- Try to find image from "/images" folder -->
+{{ if not $originalImage}}
+	{{ $imagesPage := $ctx.Site.GetPage "/images" }}
+	{{ $originalImage = $imagesPage.Resources.GetMatch .imageName }}
+{{ end }}
+
+<!-- Try to find image from "/assets" folder -->
+{{ if not $originalImage}}
+	{{ $originalImage = resources.Get .imageName }}
+{{ end }}
+
+{{ $result = merge $result (dict "originalImage" $originalImage) }}
+
+{{ if and .newSize $originalImage }}
+	{{ $scaledImage := ($originalImage.Resize .newSize) }}
+	{{ $result = merge $result (dict "scaledImage" $scaledImage) }}
+{{ end }}
+
+{{ return $result }}

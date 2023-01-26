@@ -2,22 +2,10 @@
 {{ $subtitle := (index .Params 1)}}
 {{ $newSize := (index .Params 2) }}
 
-<!-- Try to find image locally in the posts folder -->
-{{ $originalImage := .Page.Resources.GetMatch $imageName }}
+{{ $imageDict := partial "getScaledImage.html" (dict "imageName" $imageName "newSize" $newSize) }}
 
-<!-- Try to find image from "/images" folder -->
-{{ if not $originalImage}}
-	{{ $imagesPage := .Site.GetPage "/images" }}
-	{{ $originalImage = $imagesPage.Resources.GetMatch $imageName }}
-{{ end }}
-
-<!-- Try to find image from "/assets" folder -->
-{{ if not $originalImage}}
-	{{ $originalImage = resources.Get $imageName }}
-{{ end }}
-
-{{ .Scratch.Set "image" ($originalImage.Resize $newSize) }}
-{{ $scaledImage := .Scratch.Get "image" }}
+{{ $originalImage := $imageDict.originalImage }}
+{{ $scaledImage := $imageDict.scaledImage }}
 
 <figure>
 	<a href={{ $originalImage.Permalink }} target="_blank">

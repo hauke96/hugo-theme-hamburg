@@ -1,19 +1,9 @@
 {{ $imageName := (index .Params 0) }}
 {{ $subtitle := (index .Params 1) }}
 
-<!-- Try to find image locally in the posts folder -->
-{{ $image := .Page.Resources.GetMatch $imageName }}
+{{ $imageDict := partial "getScaledImage.html" (dict "imageName" $imageName) }}
 
-<!-- Try to find image from "/images" folder -->
-{{ if not $image}}
-	{{ $imagesPage := .Site.GetPage "/images" }}
-	{{ $image = $imagesPage.Resources.GetMatch $imageName }}
-{{ end }}
-
-<!-- Try to find image from "/assets" folder -->
-{{ if not $image}}
-	{{ $image = resources.Get $imageName }}
-{{ end }}
+{{ $image := $imageDict.originalImage }}
 
 <figure>
 	<a href={{ $image.Permalink }} target="_blank">
