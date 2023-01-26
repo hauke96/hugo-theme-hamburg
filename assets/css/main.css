@@ -2,15 +2,23 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 17px;
 	line-height: 1.58823529;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 
-.container {
-	max-width: 750px;
+main {
+	flex-grow: 1;
+	width: 750px;
 	word-wrap: break-word;
 	margin-right: auto;
 	margin-left: auto;
@@ -46,7 +54,7 @@ body {
 	font-weight: 100;
 	font-size: 52px;
 	border-bottom: 1px solid;
-	max-width: 550px;
+	width: 550px;
 }
 
 .header-text h1 a {
@@ -57,21 +65,11 @@ body {
 
 .navbar-container {
 	display: flex;
-	flex-direction: row-reverse;
 	position: absolute;
 	/* right: 20px; */
 	bottom: 20px;
 	width: 100%;
 	justify-content: center;
-}
-
-.navbar-item {
-	margin-left: 20px;
-	position: initial !important;
-}
-
-.navbar-item:last-child {
-	margin-left: 0px;
 }
 
 /* Language list */
@@ -84,7 +82,7 @@ body {
 	right: 20px;
 }
 
-.language-button {
+._language-button {
 	margin-left: 5px;
 	position: initial !important;
 }
@@ -98,13 +96,13 @@ body {
 /* Footer */
 
 .global-footer {
-	padding-top: 10px;
-	max-width: 750px;
-	height: 100px;
-}
-
-.global-footer .sns-links {
-	float: right;
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: end;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 750px;
 }
 
 .global-footer .sns-links a {
@@ -136,12 +134,17 @@ body {
 	*/
 }
 
+.article-list hr {
+	margin-bottom: 0;
+}
+
 .article-title {
 	position: relative;
 }
 
 .article-title h1 {
 	font-size: 44px;
+	margin-bottom: 0;
 }
 
 .article-title * {
@@ -159,13 +162,15 @@ body {
 	*/
 }
 
+.not-found {
+	flex-grow: 1;
+	justify-content: center;
+	text-align: center;
+}
+
 .not-found h1 {
 	font-weight: 200;
 	font-size: 80px;
-}
-
-.not-found {
-	text-align: center;
 }
 
 .author-info {
@@ -200,6 +205,7 @@ body {
 /* Article list */
 
 .li-h1 {
+	margin-top: 25px;
 	margin-bottom: 2px;
 }
 
@@ -331,7 +337,8 @@ article section img {
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 blockquote {

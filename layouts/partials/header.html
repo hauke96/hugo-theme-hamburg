@@ -80,7 +80,7 @@
       <!-- sites -->
       <div class="navbar-container">
         {{ range .Site.Menus.main }}
-          <a class="btn btn-default navbar-item" href="{{ .URL | absLangURL | safeURL }}">
+          <a class="btn btn-default button-list-item" href="{{ .URL | absLangURL | safeURL }}">
             {{ .Name }}
           </a>
         {{ end }}
@@ -98,10 +98,10 @@
       {{ if .IsTranslated }}
         <div class="language-container">
           {{ range .Site.Home.AllTranslations }}
-            <a class="btn btn-default language-button" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
+            <a class="btn btn-default button-list-item" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
           {{ end }}
         </div>
       {{ end }}
     </section>
   </header>
-  <main class="container">
+  <main>

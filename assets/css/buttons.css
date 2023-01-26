@@ -37,3 +37,16 @@ XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
 	top: 20px;
   }
 }
+
+.button-list-item {
+	margin-left: 15px;
+	background-color: #00000020 !important;
+}
+
+.button-list-item:hover {
+	background-color: #bdbdbd20 !important;
+}
+
+.button-list-item:first-child {
+	margin-left: 0px;
+}
