@@ -401,9 +401,15 @@ I don't use the default pager-class because I want to use the normal buttons wit
 
 .pagination {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
-	margin-bottom: 20px;
+	align-items: flex-start;
+	margin: 20px 0px;
 	border-radius: unset;
+}
+
+.page-label {
+	margin: 0px 10px;
 }
 
 /* Images */

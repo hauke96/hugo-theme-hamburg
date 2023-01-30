@@ -2,29 +2,29 @@
   <hr>
   <nav class="pagination" role="navigation">
     {{ if .HasNext }}
-      <a class="btn btn-primary btn-older-posts" href="{{ .Next.URL }}">
+      <a class="btn btn-primary btn-posts-navigation" href="{{ .Next.URL }}">
         <div>
           <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
         </div>
       </a>
     {{ else }}
-      <a class="btn btn-primary btn-older-posts disabled" href="#">
+      <a class="btn btn-primary btn-posts-navigation disabled" href="#">
         <div>
           <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
         </div>
       </a>
     {{ end }}
-    <div>
+    <div class="page-label">
       <span>{{ i18n "pageOf" . }}</span>
     </div>
     {{ if .HasPrev }}
-      <a class="btn btn-primary btn-newer-posts" href="{{ .Prev.URL }}">
+      <a class="btn btn-primary btn-posts-navigation" href="{{ .Prev.URL }}">
         <div>
           {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
         </div>
       </a>
     {{ else }}
-      <a class="btn btn-primary btn-newer-posts disabled" href="#">
+      <a class="btn btn-primary btn-posts-navigation disabled" href="#">
         <div>
           {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
         </div>

@@ -20,12 +20,8 @@ XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
 }
 */
 
-.btn-older-posts {
-	float: left;
-}
-
-.btn-newer-posts {
-	float: right;
+.btn-posts-navigation {
+	white-space: nowrap;
 }
 
 .btn-home {

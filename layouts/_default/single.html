@@ -80,37 +80,36 @@
    {{ if (isset .Params "nopagination")  }}
     {{ else }}
     <hr>
-    <div class="pager-container">
+    <nav class="pagination" role="navigation">
       {{ with .PrevInSection }}
-        <a class="btn btn-primary btn-older-posts" href="{{ .Permalink }}">
+        <a class="btn btn-primary btn-posts-navigation" href="{{ .Permalink }}">
           <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </div>
         </a>
       {{ else }}
-        <a class="btn btn-primary btn-older-posts disabled" href="#">
+        <a class="btn btn-primary btn-posts-navigation disabled" href="#">
           <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </div>
         </a>
       {{ end }}
       {{ with .NextInSection }}
-        <a class="btn btn-primary btn-newer-posts" href="{{ .Permalink }}">
+        <a class="btn btn-primary btn-posts-navigation" href="{{ .Permalink }}">
           <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </div>
         </a>
       {{ else }}
-        <a class="btn btn-primary btn-newer-posts disabled" href="#">
+        <a class="btn btn-primary btn-posts-navigation disabled" href="#">
           <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </div>
         </a>
       {{ end }}
      {{ end }}    
-    </div>
+    </nav>
   </footer>
 </article>
-<hr>
 
 {{ partial "footer.html" . }}
