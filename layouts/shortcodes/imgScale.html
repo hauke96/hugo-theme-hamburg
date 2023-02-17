@@ -14,10 +14,8 @@
 		</center>
 	</a>
 	<figcaption>
-		<h4>
-			<center>
-				{{ $subtitle | .Page.RenderString }} ({{ printf "%.*f" 2 (div (len $originalImage.Content) 1000000.0) }}MB)
-			</center>
-		</h4>
+		<center>
+			{{ $subtitle | .Page.RenderString }} ({{ printf "%.*f" 2 (div (len $originalImage.Content) 1000000.0) }}MB)
+		</center>
 	</figcaption>
 </figure>

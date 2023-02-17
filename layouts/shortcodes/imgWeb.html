@@ -1,0 +1,14 @@
+{{ $imageUrl := (index .Params 0)}}
+{{ $subtitle := (index .Params 1)}}
+{{ $maxSize := (index .Params 2) }}
+
+<figure>
+	<a href={{ $imageUrl }} target="_blank">
+		<center>
+			<img class="embedded-image" style="max-width: {{ $maxSize }}; max-height: {{ $maxSize }};" alt="{{ $subtitle | .Page.RenderString }}" src={{ $imageUrl }}>
+		</center>
+	</a>
+	<figcaption>
+		<center>{{ $subtitle | .Page.RenderString }}</center>
+	</figcaption>
+</figure>

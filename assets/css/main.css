@@ -383,6 +383,12 @@ figure {
 	margin: 0;
 }
 
+figcaption {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
 hr {
 	margin: 20px 0;
 	border: none;

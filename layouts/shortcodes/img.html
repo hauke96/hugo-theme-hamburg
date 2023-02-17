@@ -12,10 +12,8 @@
 		</center>
 	</a>
 	<figcaption>
-		<h4>
-			<center>
-				{{ $subtitle }} ({{ printf "%.*f" 2 (div (len $image.Content) 1000000.0) }}MB)
-			</center>
-		</h4>
+		<center>
+			{{ $subtitle }} ({{ printf "%.*f" 2 (div (len $image.Content) 1000000.0) }}MB)
+		</center>
 	</figcaption>
 </figure>
