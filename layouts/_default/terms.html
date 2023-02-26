@@ -1,13 +1,12 @@
 {{ partial "header.html" . }}
 <section class="taxonomy-terms">
   <h1>{{ .Title }}</h1>
-  {{ $data := .Data }}
-  <div class="list-group">
-	{{ range $key, $value := .Pages }}
-      <a class="list-group-item" href="{{ $value.Permalink }}">
-        {{ $value.Name }}
-      </a>
+  <ul>
+	{{ range .Data.Terms.Alphabetical }}
+	  <li>
+      <a href="{{ .Page.Permalink }}">{{ .Page.Name }}</a> ({{.Count}})
+	  </li>
     {{ end }}
-  </div>
+  </ul>
 </section>
 {{ partial "footer.html" . }}
