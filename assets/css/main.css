@@ -189,17 +189,6 @@ main {
 	*/
 }
 
-.not-found {
-	flex-grow: 1;
-	justify-content: center;
-	text-align: center;
-}
-
-.not-found h1 {
-	font-weight: 200;
-	font-size: 80px;
-}
-
 .author-info {
 	display: flex;
 	flex-direction: row;
@@ -446,4 +435,26 @@ table, th, td {
 /* Map */
 .show-complete-map-link {
 	margin-bottom: 10px;
+}
+
+/* 404 Styling */
+.not-found {
+	margin-top: 40px;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.not-found h1 {
+	font-weight: 500;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+.not-found-heading {
+	font-family: monospace;
+}
+
+.not-found-letter {
+	transform: rotate(25deg) translate(0.1em, 0.2em);
+	display: inline-block;
 }

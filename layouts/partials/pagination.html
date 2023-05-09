@@ -1,32 +1,32 @@
 {{ if or .HasPrev .HasNext }}
   <hr>
   <nav class="pagination" role="navigation">
-    {{ if .HasNext }}
-      <a class="btn btn-primary btn-posts-navigation" href="{{ .Next.URL }}">
+    {{ if .HasPrev }}
+      <a class="btn btn-primary btn-posts-navigation" href="{{ .Prev.URL }}">
         <div>
-          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+          <span aria-hidden="true">&larr;</span> {{ i18n "newerPosts" }}
         </div>
       </a>
     {{ else }}
       <a class="btn btn-primary btn-posts-navigation disabled" href="#">
         <div>
-          <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
+          <span aria-hidden="true">&larr;</span> {{ i18n "newerPosts" }}
         </div>
       </a>
     {{ end }}
     <div class="page-label">
       <span>{{ i18n "pageOf" . }}</span>
     </div>
-    {{ if .HasPrev }}
-      <a class="btn btn-primary btn-posts-navigation" href="{{ .Prev.URL }}">
+    {{ if .HasNext }}
+      <a class="btn btn-primary btn-posts-navigation" href="{{ .Next.URL }}">
         <div>
-          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+          {{ i18n "olderPosts" }} <span aria-hidden="true">&rarr;</span>
         </div>
       </a>
     {{ else }}
       <a class="btn btn-primary btn-posts-navigation disabled" href="#">
         <div>
-          {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
+          {{ i18n "olderPosts" }} <span aria-hidden="true">&rarr;</span>
         </div>
       </a>
     {{ end }}

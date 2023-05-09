@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<section class="row not-found">
-  <h1>404</h1>
-  <div>{{ i18n "pageNotExists" }}</div>
+<section class="not-found">
+  <h1 class="not-found-heading"><span class="primary-color">40</span><span class="not-found-letter primary-color">4</span></h1>
+  <div>{{ i18n "pageNotExists" | markdownify }}</div>
 </section>
 {{ partial "footer.html" . }}

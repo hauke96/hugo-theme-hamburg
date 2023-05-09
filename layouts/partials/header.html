@@ -3,25 +3,16 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
   <meta http-equiv='content-language' content="{{ .Site.LanguageCode }}">
-  
-  {{ with .Site.Params.themecolor }}
-    <meta name="theme-color" content="{{ . }}" />
-  {{ end }}
-  
+
+  /* Open Graph Protocol entries */
+  <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.Description }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
-
-  {{ if .Description }}
-    <meta name="description" content="{{ .Description }}">
-  {{ else if .IsPage }}
-    <meta name="description" content="{{ .Summary | plainify }}">
-  {{ end }}
-
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ with .Params.images }}
     {{ range first 5 . }}
-      <meta property="og:image" content="{{ . | absLangURL }}" />
+      <meta property="og:image" content="{{ . | absURL }}" />
     {{ end }}
   {{ end }}
   
@@ -37,11 +28,37 @@
   {{ else }}
     <meta property="og:type" content="website" />
   {{ end }}
+  
+  {{ with .Site.Params.themecolor }}
+    <meta name="theme-color" content="{{ . }}" />
+  {{ end }}
+
+  /* Description, title, etc. */
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+  {{ else if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+  {{ else if .IsPage }}
+    <meta name="description" content="{{ .Summary | plainify }}">
+  {{ end }}
 
   <title>
-    {{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+   {{ if .IsHome }}
+     {{ i18n "home" }} | {{ .Site.Title }}
+   {{ else if .Params.hide_site_title }}
+     {{ .Page.Title }}
+   {{ else if .Page.Title }}
+     {{ .Page.Title }} | {{ .Site.Title }}
+   {{ else }}
+     {{ .Site.Title }}
+   {{ end }}
   </title>
 
+  {{ with .Params.tags }}
+    <meta name="keywords" content="{{ delimit . ", " }}">
+  {{ end }}
+
+  /* Styling */
   {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" }}
   <link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
 
@@ -57,6 +74,21 @@
   {{ if eq .Permalink "/" }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
+
+  {{ if isset .Params "canonical" }}
+    <link rel="canonical" href="{{ .Params.canonical }}" />
+  {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+  {{ end }}
+
+  {{ if .Paginator }}
+    {{ if .Paginator.HasPrev }}
+      <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+      <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
+    {{ end }}
+  {{ end }}
 </head>
 <body>
   {{ if isset .Params "image" }}
@@ -65,9 +97,9 @@
   <header class="global-header"  style="background-image:url({{ "images/bg.jpg" | absURL }})">
   {{ end }}
     <section class="header-text">
-	  <div class="site-title-container">
+      <div class="site-title-container">
         <h1><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
-	  </div>
+      </div>
 
       {{ with .Site.Params.subtitle }}
         <h3 class="tag-line">
