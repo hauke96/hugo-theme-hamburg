@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <meta http-equiv='content-language' content="{{ .Site.LanguageCode }}">
 
-  /* Open Graph Protocol entries */
+  <!-- Open Graph Protocol entries -->
   <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
   <meta property="og:description" content="{{ .Site.Params.Description }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -33,7 +33,7 @@
     <meta name="theme-color" content="{{ . }}" />
   {{ end }}
 
-  /* Description, title, etc. */
+  <!-- Description, title, etc. -->
   {{ if .Description }}
     <meta name="description" content="{{ .Description }}">
   {{ else if .Site.Params.description }}
@@ -58,7 +58,7 @@
     <meta name="keywords" content="{{ delimit . ", " }}">
   {{ end }}
 
-  /* Styling */
+  <!-- Styling -->
   {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" }}
   <link rel="stylesheet" href="{{ $CSS.Permalink }}" media="all">
 
