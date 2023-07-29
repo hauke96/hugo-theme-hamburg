@@ -1,1 +1,1 @@
-<h{{ .Level }} class="anchored-heading"><a href="#{{ .Anchor }}">{{ .Text }}</a></h{{ .Level }}>
+<h{{ .Level }} class="anchored-heading"><a href="#{{ .Anchor }}">{{ .Text | safeHTML }}</a></h{{ .Level }}>
