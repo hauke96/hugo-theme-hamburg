@@ -1,5 +1,5 @@
 [pageNotExists]
-  other = "That page doesn't exist!"
+  other = "Sorry, but this page doesn't exist!<br>Please use the navigation buttons above or go back to the [home page](/)."
 [home]
   other = "Home"
 [newerPosts]
@@ -20,3 +20,5 @@
   other = "Jan 2, 2006"
 [allTags]
   other = "All tags"
+[showCompleteMap]
+  other = "Show complete map"

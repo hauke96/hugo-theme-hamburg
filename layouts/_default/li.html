@@ -21,7 +21,11 @@
       </div>
       {{ if (isset .Params "images") }}
         <a href="{{ .Permalink }}">
-          <img class="embedded-image" src="{{ index .Params.images 0 | absLangURL }}"/>
+          {{ $imageName := (index .Params.images 0)}}
+          {{ $imageDict := partial "getScaledImage.html" (dict "ctx" .Page "imageName" (index .Params.images 0) "newSize" "250x") }}
+		  {{ $scaledImage := $imageDict.scaledImage }}
+
+          <img class="embedded-image" alt="{{ .Title }}" src="{{ $scaledImage.Permalink }}"/>
         </a>
       {{ end }}
     </div>

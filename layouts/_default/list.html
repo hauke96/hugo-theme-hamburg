@@ -2,7 +2,7 @@
 <section class="article-list">
   <h1>{{ .Title }}</h1>
   {{ range .Pages }}
-    <div class="delimiter"></div>
+    <hr>
     {{ .Render "li" }}
   {{ end }}
 </section>

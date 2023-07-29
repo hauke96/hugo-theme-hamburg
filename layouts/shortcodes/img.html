@@ -1,26 +1,19 @@
 {{ $imageName := (index .Params 0) }}
 {{ $subtitle := (index .Params 1) }}
 
-<!-- Try to find image locally in the posts folder -->
-{{ $image := .Page.Resources.GetMatch $imageName }}
+{{ $imageDict := partial "getScaledImage.html" (dict "imageName" $imageName) }}
 
-<!-- Try to find image from "/images" folder -->
-{{ if not $image}}
-	{{ $imagesPage := .Site.GetPage "/images" }}
-	{{ $image = $imagesPage.Resources.GetMatch $imageName }}
-{{ end }}
+{{ $image := $imageDict.originalImage }}
 
 <figure>
 	<a href={{ $image.Permalink }} target="_blank">
 		<center>
-			<img class="embedded-image" src={{ $image.Permalink }}>
+			<img class="embedded-image" alt="{{ $subtitle | .Page.RenderString }}" src={{ $image.Permalink }}>
 		</center>
 	</a>
 	<figcaption>
-		<h4>
-			<center>
-				{{ $subtitle }} ({{ printf "%.*f" 2 (div (len $image.Content) 1000000.0) }}MB)
-			</center>
-		</h4>
+		<center>
+			{{ $subtitle }} ({{ printf "%.*f" 2 (div (len $image.Content) 1000000.0) }}MB)
+		</center>
 	</figcaption>
 </figure>

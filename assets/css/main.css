@@ -1,0 +1,474 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 17px;
+	line-height: 1.58823529;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+	width: 750px;
+	max-width: 100%;
+	word-wrap: break-word;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 15px;
+}
+
+/* Header */
+
+.global-header {
+	background-size: cover;
+	background-position-x: center;
+	min-height: 350px;
+}
+
+.header-text {
+	position: relative;
+	min-height: inherit;
+}
+
+.header-text .tag-line {
+	margin: 25px auto;
+	padding: 0 10px;
+	max-width: 430px;
+	text-align: center;
+	font-weight: 200;
+}
+
+.header-text h1 {
+	padding-bottom: 25px;
+	margin-bottom: 0;
+	text-align: center;
+	font-weight: 100;
+	font-size: 52px;
+	border-bottom: 1px solid;
+	width: 550px;
+}
+
+.header-text h1 a {
+	text-decoration: none;
+}
+
+.site-title-container {
+	display: flex;
+	justify-content: center;
+	padding: 0 25px;
+	width: 100%;
+}
+
+/* Navbar */
+
+.navbar-container {
+	display: flex;
+	position: absolute;
+	/* right: 20px; */
+	bottom: 20px;
+	width: 100%;
+	justify-content: center;
+}
+
+/* Language list */
+
+.language-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	position: absolute;
+	right: 20px;
+}
+
+.language-container {
+	top: 20px;
+}
+
+@media (max-width: 750px) {
+	.global-header {
+		min-height: 250px;
+	}
+
+	.language-container, .btn-home {
+		top: unset;
+	}
+
+	.header-text .tag-line {
+		margin: 15px auto;
+		padding: 0 10px;
+		font-size: 18px;
+	}
+	
+	.header-text h1 {
+		padding-bottom: 15px;
+		font-size: 35px;
+		border-bottom: 1px solid;
+	}
+}
+
+/* Footer */
+
+.global-footer {
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: end;
+	padding: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 750px;
+	max-width: 100%;
+}
+
+.global-footer .sns-links {
+	white-space: nowrap;
+}
+
+.global-footer .sns-links a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	vertical-align: top;
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color,border-color 0.1s linear;
+	*/
+}
+
+.global-footer .sns-links a i {
+	vertical-align: middle;
+}
+
+/* Article */
+
+.article-list h2 a {
+	text-decoration: none;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color 0.1s linear;
+	*/
+}
+
+.article-list hr {
+	margin-bottom: 0;
+}
+
+.article-title {
+	position: relative;
+}
+
+.article-title h1 {
+	font-size: 44px;
+	margin-bottom: 0;
+}
+
+.article-title * {
+	text-align: center;
+}
+
+.post-tag a {
+	margin-left: 10px;
+	padding: 0 10px;
+	border-radius: 12px;
+	text-decoration: none;
+	/*
+	XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
+	transition: color,border-color,background-color 0.1s linear;
+	*/
+}
+
+.author-info {
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+}
+
+.author-name {
+	margin: 0 0 5px 0;
+}
+
+.author-avatar {
+	margin-right: 25px;
+}
+
+.author-avatar img {
+	max-width: 100px;
+	max-height: 100px;
+	width: 100px;
+	height: 100px;
+}
+
+.author-contact {
+	margin-top: 10px;
+}
+
+.author-meta {
+	flex-grow: 1;
+}
+
+/* Article list */
+
+.li-h1 {
+	margin-top: 25px;
+	margin-bottom: 2px;
+}
+
+.li-small {
+	font-size: 70%;
+	margin-top: 3px;
+	margin-bottom: 6px;
+}
+
+.li-content {
+	display: flex;
+}
+
+.li-content img {
+	width: 250px;
+	margin-left: 20px;
+}
+
+.summary-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+/* Clearfix */
+
+.clearfix {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Tag list */
+
+#container-tags-title {
+	display: flex;
+	justify-content: space-between;
+}
+#btn-all-tags {
+	align-self: flex-end;
+	margin-bottom: 13px;
+}
+.list-group-item {
+	border-radius: 0px !important;
+}
+
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 300;
+	line-height: 1.1;
+}
+h1, h2, h3 {
+	margin-top: 26px;
+	margin-bottom: 13px;
+}
+h4, h5, h6 {
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+
+pre {
+	font-size: 13px;
+}
+
+pre code {
+	overflow: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+ul ol,
+ol ul,
+ol ol,
+ul ul {
+	margin-bottom: 0;
+}
+
+small, .small {
+	font-size: 80%;
+}
+
+sup {
+	top: -0.5em;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+article section img {
+	max-width: 100%;
+	height: auto;
+	margin: 13px auto;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: flex;
+	flex-direction: column;
+}
+
+blockquote {
+	padding: 20px;
+	margin: 15px 0px;
+	font-size: unset;
+	font-style:italic;
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+hr {
+	margin: 20px 0;
+	border: none;
+	border-top: 1px solid #0000001B;
+	height: 0;
+}
+
+/*
+Paging at the bottom
+
+I don't use the default pager-class because I want to use the normal buttons with my style
+*/
+.pager-container {
+	overflow: auto;
+}
+
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 20px 0px;
+	border-radius: unset;
+}
+
+.page-label {
+	margin: 0px 10px;
+}
+
+/* Images */
+.embedded-image {
+	padding: 5px;
+	vertical-align: middle;
+}
+
+/* Note box */
+.note {
+	padding: 20px;
+	margin: 15px 0px;
+}
+
+/* Table */
+table {
+	width: 100%;
+	margin: 15px 0px;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	text-align: left;
+}
+
+/* Map */
+.show-complete-map-link {
+	margin-bottom: 10px;
+}
+
+/* 404 Styling */
+.not-found {
+	margin-top: 40px;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.not-found h1 {
+	font-weight: 500;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+
+.not-found-heading {
+	font-family: monospace;
+}
+
+.not-found-letter {
+	transform: rotate(25deg) translate(0.1em, 0.2em);
+	display: inline-block;
+}
+
+/* References */
+.ref-container {
+	font-size: smaller;
+	line-height: 1.2;
+	display: flex;
+	flex-direction: column;
+}
+
+.ref-container > span {
+	margin-bottom: 8px;
+}
+
+.anchored-heading > a {
+	color: unset;
+}

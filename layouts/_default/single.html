@@ -5,21 +5,21 @@
   <header class="article-title">
     <h1 class="text-primary">{{ .Title }}</h1>
   </header>
-  <div class="delimiter"></div>
+  <hr>
   <section>
     {{ .Content }}
   </section>
   <div class="clearfix">
     {{ if (isset .Params "noshowdate")  }}
     {{ else }}
-      <div class="post-date pull-left">
+      <div class="post-date">
         <span class="small">
           {{ i18n "postedOn" }}
           {{ .Date.Format ( i18n "dateTimeFormat" ) }}
         </span>
       </div>
     {{ end }}
-    <div class="pull-right">
+    <div>
       {{ range .Params.tags }}
         <span class="post-tag small">
           <a href="{{ ($.Site.GetPage "taxonomy" ( print "/tags/" ( . ) ) ).Permalink }}">
@@ -32,14 +32,14 @@
   <footer>
     {{ if and (isset $data "authors") (isset .Params "author") }}
       {{ $author := index $data.authors .Params.author }}
-        <div class="delimiter"></div>
-        <section class="author-info row">
-          <div class="author-avatar col-md-2">
+        <hr>
+        <section class="author-info">
+          <div class="author-avatar">
             {{ with $author.avatar }}
               <img alt="Author Avatar" src="{{ . }}" />
             {{ end }}
           </div>
-          <div class="author-meta col-md-10">
+          <div class="author-meta">
             {{ with $author.name }}
               <h2 class="author-name text-primary">{{ . }}</h2>
             {{ end }}
@@ -57,14 +57,14 @@
           </div>
         </section>
       {{ end }}
-	{{ if .Site.Params.UseCommento }}
-	  <div class="delimiter"></div>
-	  <h2 class="text-primary">Kommentare</h2>
-	  <div id="commento"></div>
-	  <script src="https://cdn.commento.io/js/commento.js"></script>
+    {{ if .Site.Params.UseCommento }}
+      <hr>
+      <h2 class="text-primary">Kommentare</h2>
+      <div id="commento"></div>
+      <script src="https://cdn.commento.io/js/commento.js"></script>
     {{ else if (isset .Site.Params "disqus") }}
       {{ with .Site.Params.disqus }}
-        <div class="delimiter"></div>
+        <hr>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
           var disqus_shortname = '{{ . }}';
@@ -79,38 +79,37 @@
     {{ end }}
    {{ if (isset .Params "nopagination")  }}
     {{ else }}
-    <div class="delimiter"></div>
-    <div class="pager-container">
+    <hr>
+    <nav class="pagination" role="navigation">
       {{ with .PrevInSection }}
-        <a class="btn btn-primary btn-older-posts" href="{{ .Permalink }}">
+        <a class="btn btn-primary btn-posts-navigation" href="{{ .Permalink }}">
           <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </div>
         </a>
       {{ else }}
-        <a class="btn btn-primary btn-older-posts disabled" href="#">
+        <a class="btn btn-primary btn-posts-navigation disabled" href="#">
           <div>
             <span aria-hidden="true">&larr;</span> {{ i18n "olderPosts" }}
           </div>
         </a>
       {{ end }}
       {{ with .NextInSection }}
-        <a class="btn btn-primary btn-newer-posts" href="{{ .Permalink }}">
+        <a class="btn btn-primary btn-posts-navigation" href="{{ .Permalink }}">
           <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </div>
         </a>
       {{ else }}
-        <a class="btn btn-primary btn-newer-posts disabled" href="#">
+        <a class="btn btn-primary btn-posts-navigation disabled" href="#">
           <div>
             {{ i18n "newerPosts" }} <span aria-hidden="true">&rarr;</span>
           </div>
         </a>
       {{ end }}
      {{ end }}    
-    </div>
+    </nav>
   </footer>
 </article>
-<div class="delimiter"></div>
 
 {{ partial "footer.html" . }}

@@ -2,29 +2,20 @@
 {{ $subtitle := (index .Params 1)}}
 {{ $newSize := (index .Params 2) }}
 
-<!-- Try to find image locally in the posts folder -->
-{{ $originalImage := .Page.Resources.GetMatch $imageName }}
+{{ $imageDict := partial "getScaledImage.html" (dict "imageName" $imageName "newSize" $newSize) }}
 
-<!-- Try to find image from "/images" folder -->
-{{ if not $originalImage}}
-	{{ $imagesPage := .Site.GetPage "/images" }}
-	{{ $originalImage = $imagesPage.Resources.GetMatch $imageName }}
-{{ end }}
-
-{{ .Scratch.Set "image" ($originalImage.Resize $newSize) }}
-{{ $scaledImage := .Scratch.Get "image" }}
+{{ $originalImage := $imageDict.originalImage }}
+{{ $scaledImage := $imageDict.scaledImage }}
 
 <figure>
 	<a href={{ $originalImage.Permalink }} target="_blank">
 		<center>
-			<img class="embedded-image" src={{ $scaledImage.Permalink }}>
+			<img class="embedded-image" alt="{{ $subtitle | .Page.RenderString }}" src={{ $scaledImage.Permalink }}>
 		</center>
 	</a>
 	<figcaption>
-		<h4>
-			<center>
-				{{ $subtitle | .Page.RenderString }} ({{ printf "%.*f" 2 (div (len $originalImage.Content) 1000000.0) }}MB)
-			</center>
-		</h4>
+		<center>
+			{{ $subtitle | .Page.RenderString }} ({{ printf "%.*f" 2 (div (len $originalImage.Content) 1000000.0) }}MB)
+		</center>
 	</figcaption>
 </figure>
