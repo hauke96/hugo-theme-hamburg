@@ -159,3 +159,7 @@ blockquote {
 table, th, td {
 	border: 1px solid #bdbdbd;
 }
+
+.anchored-heading > a {
+	color: #757575;
+}

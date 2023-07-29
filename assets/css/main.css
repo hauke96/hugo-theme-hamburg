@@ -270,8 +270,6 @@ main {
 	border-radius: 0px !important;
 }
 
-/* Bootstrap adjustions */
-
 h1 {
 	font-size: 36px;
 }
@@ -457,4 +455,20 @@ table, th, td {
 .not-found-letter {
 	transform: rotate(25deg) translate(0.1em, 0.2em);
 	display: inline-block;
+}
+
+/* References */
+.ref-container {
+	font-size: smaller;
+	line-height: 1.2;
+	display: flex;
+	flex-direction: column;
+}
+
+.ref-container > span {
+	margin-bottom: 8px;
+}
+
+.anchored-heading > a {
+	color: unset;
 }
