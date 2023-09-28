@@ -406,6 +406,12 @@ I don't use the default pager-class because I want to use the normal buttons wit
 }
 
 /* Images */
+.image-figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .embedded-image {
 	padding: 5px;
 	vertical-align: middle;

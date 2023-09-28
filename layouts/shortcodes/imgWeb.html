@@ -1,14 +1,19 @@
+<!--
+This shortcut can be used to embed an external image from the web.
+
+Example:
+{ {< imgWeb "https://website.com/picture.jpg" "Some caption" "500px" >}}
+-->
+
 {{ $imageUrl := (index .Params 0)}}
 {{ $subtitle := (index .Params 1)}}
 {{ $maxSize := (index .Params 2) }}
 
-<figure>
+<figure class="image-figure">
 	<a href={{ $imageUrl }} target="_blank">
-		<center>
-			<img class="embedded-image" style="max-width: {{ $maxSize }}; max-height: {{ $maxSize }};" alt="{{ $subtitle | .Page.RenderString }}" src={{ $imageUrl }}>
-		</center>
+		<img class="embedded-image" style="max-width: {{ $maxSize }}; max-height: {{ $maxSize }};" alt="{{ $subtitle | .Page.RenderString }}" src={{ $imageUrl }}>
 	</a>
-	<figcaption>
-		<center>{{ $subtitle | .Page.RenderString }}</center>
+	<figcaption style="max-width: {{ $maxSize }}">
+		<span>{{ $subtitle | .Page.RenderString }}</span>
 	</figcaption>
 </figure>
