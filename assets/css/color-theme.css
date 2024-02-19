@@ -93,6 +93,10 @@ a:focus {
 	color: #757575;
 }
 
+.author-contactme-noscript {
+	color: #757575;
+}
+
 /* Color for e.g. headers and links */
 .text-primary, a {
 	color: #558b2f;

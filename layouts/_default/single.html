@@ -47,12 +47,13 @@
               <div class="author-bio">{{ . }}</div>
             {{ end }}
             {{ with $author.contact }}
-              <a class="btn btn-primary author-contact" href="{{ . }}">
+              <a class="btn btn-primary author-contact" onclick="window.open(atob('{{ . | encoding.Base64Encode }}'))">
                 <div>
                   <i class="fa fa-envelope-o" aria-hidden="true"></i>
                   &nbsp;{{ i18n "contactMe" }}
                 </div>
               </a>
+              <noscript><span class="author-contactme-noscript">{{ i18n "contactMeNoscript" }}</span></noscript>
             {{ end }}
           </div>
         </section>

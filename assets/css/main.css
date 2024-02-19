@@ -213,6 +213,9 @@ main {
 .author-contact {
 	margin-top: 10px;
 }
+.author-contact:hover {
+	cursor: pointer;
+}
 
 .author-meta {
 	flex-grow: 1;
