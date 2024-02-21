@@ -81,7 +81,8 @@
     <link rel="canonical" href="{{ .Permalink }}" />
   {{ end }}
 
-  {{ if and .Page.IsNode .Page.Paginator }}
+  <!-- Condition specifically made for pagination to be able to call paginator multiple times (here and in index.html). -->
+  {{ if .Page.IsNode }}
     {{ with $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
       {{ if $paginator.HasPrev }}
         <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />

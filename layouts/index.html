@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+
 <div class="article-list">
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
   {{ range $index, $page := $paginator.Pages }}
