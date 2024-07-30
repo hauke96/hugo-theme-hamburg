@@ -111,12 +111,14 @@
       {{ end }}
       
       <!-- sites -->
-      <div class="navbar-container">
-        {{ range .Site.Menus.main }}
-          <a class="btn btn-default button-list-item" href="{{ .URL | absLangURL | safeURL }}">
-            {{ .Name }}
-          </a>
-        {{ end }}
+      <div class="navbar-wrapper">
+        <div class="navbar-container">
+          {{ range .Site.Menus.main }}
+            <a class="btn btn-default button-list-item" href="{{ .URL | absLangURL | safeURL }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </div>
       </div>
 
       <!-- Home and language buttons -->
@@ -132,7 +134,7 @@
         {{ $url := urls.Parse .Permalink }}
         <!-- The url.Host has only the domain in it -->
         {{ $address := print $url.Scheme "://" $url.Host }}
-        <!-- Dirrerence between address and base URL. This could result in "" or "/beta/" or similar. -->
+        <!-- Difference between address and base URL. This could result in "" or "/beta/" or similar. -->
         {{ $i18nBasePath := strings.TrimPrefix $address .Site.BaseURL }}
         <!-- Path like "/beta/" attached with the language code. E.g. "/beta/de" -->
         {{ $pathPrefix := print $i18nBasePath .Language }}
