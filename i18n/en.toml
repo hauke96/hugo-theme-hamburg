@@ -14,6 +14,8 @@
   other = "Read more"
 [contactMe]
   other = "Contact me"
+[contactMeNoscript]
+  other = "(Enable JavaScript to make the e-mail link work)"
 [dateTimeFormat]
   other = "Jan 2, 2006 at 15:04"
 [dateFormat]

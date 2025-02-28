@@ -68,38 +68,42 @@ main {
 	width: 100%;
 }
 
-/* Navbar */
+/* Up to 250px wide */
+@media (max-width: 250px) {
+	.tag-line {
+		display: none;
+	}
 
-.navbar-container {
-	display: flex;
-	position: absolute;
-	/* right: 20px; */
-	bottom: 20px;
-	width: 100%;
-	justify-content: center;
+	.global-header {
+		min-height: 200px;
+	}
+
+	.header-text h1 {
+		border-bottom: none;
+	}
+
+	.header-text h1 {
+		margin-top: 10px;
+	}
 }
 
-/* Language list */
-
-.language-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	position: absolute;
-	right: 20px;
-}
-
-.language-container {
-	top: 20px;
-}
-
-@media (max-width: 750px) {
+/* Between 250px and 750px wide */
+@media (min-width: 250px) and (max-width: 750px) {
 	.global-header {
 		min-height: 250px;
 	}
 
-	.language-container, .btn-home {
+	.home-lang-wrapper {
 		top: unset;
+		bottom: 60px;
+	}
+}
+
+/* Up to 750px wide */
+@media (max-width: 750px) {
+	.home-lang-wrapper {
+		top: unset;
+		bottom: 60px;
 	}
 
 	.header-text .tag-line {
@@ -107,11 +111,61 @@ main {
 		padding: 0 10px;
 		font-size: 18px;
 	}
-	
+
 	.header-text h1 {
 		padding-bottom: 15px;
 		font-size: 35px;
 		border-bottom: 1px solid;
+	}
+}
+
+/* Navbar */
+
+.navbar-wrapper {
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+	width: 100%;
+	overflow-x: scroll;
+}
+
+.navbar-container {
+	display: flex;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+/* Language list */
+
+.home-lang-wrapper {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	overflow-x: scroll;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.home-lang-wrapper {
+	top: 20px;
+}
+
+.language-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.language-container {
+}
+
+@media (max-width: 750px) {
+	.home-lang-wrapper {
+		top: unset;
+		bottom: 60px;
 	}
 }
 
@@ -212,6 +266,9 @@ main {
 
 .author-contact {
 	margin-top: 10px;
+}
+.author-contact:hover {
+	cursor: pointer;
 }
 
 .author-meta {
@@ -406,6 +463,12 @@ I don't use the default pager-class because I want to use the normal buttons wit
 }
 
 /* Images */
+.image-figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .embedded-image {
 	padding: 5px;
 	vertical-align: middle;

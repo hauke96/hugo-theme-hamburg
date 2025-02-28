@@ -81,12 +81,15 @@
     <link rel="canonical" href="{{ .Permalink }}" />
   {{ end }}
 
-  {{ with $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-    {{ if $paginator.HasPrev }}
-      <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />
-    {{ end }}
-    {{ if $paginator.HasNext }}
-      <link rel="next" href="{{ $paginator.Next.URL | absURL }}" />
+  <!-- Condition specifically made for pagination to be able to call paginator multiple times (here and in index.html). -->
+  {{ if .Page.IsNode }}
+    {{ with $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+      {{ if $paginator.HasPrev }}
+        <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <link rel="next" href="{{ $paginator.Next.URL | absURL }}" />
+      {{ end }}
     {{ end }}
   {{ end }}
 </head>
@@ -108,16 +111,18 @@
       {{ end }}
       
       <!-- sites -->
-      <div class="navbar-container">
-        {{ range .Site.Menus.main }}
-          <a class="btn btn-default button-list-item" href="{{ .URL | absLangURL | safeURL }}">
-            {{ .Name }}
-          </a>
-        {{ end }}
+      <div class="navbar-wrapper">
+        <div class="navbar-container">
+          {{ range .Site.Menus.main }}
+            <a class="btn btn-default button-list-item" href="{{ .URL | absLangURL | safeURL }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </div>
       </div>
 
       <!-- Home and language buttons -->
-      <div>
+      <div class="home-lang-wrapper">
         {{ if ( not .IsHome ) }}
           <a class="btn btn-default btn-home" href="{{ "" | absLangURL }}">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -129,7 +134,7 @@
         {{ $url := urls.Parse .Permalink }}
         <!-- The url.Host has only the domain in it -->
         {{ $address := print $url.Scheme "://" $url.Host }}
-        <!-- Dirrerence between address and base URL. This could result in "" or "/beta/" or similar. -->
+        <!-- Difference between address and base URL. This could result in "" or "/beta/" or similar. -->
         {{ $i18nBasePath := strings.TrimPrefix $address .Site.BaseURL }}
         <!-- Path like "/beta/" attached with the language code. E.g. "/beta/de" -->
         {{ $pathPrefix := print $i18nBasePath .Language }}

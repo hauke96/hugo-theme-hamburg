@@ -3,6 +3,7 @@
 	font-size: 13px;
 	border: 1px solid #ffffff;
 	padding: 6px 12px;
+	white-space: nowrap;
 }
 
 .btn:hover {
@@ -25,14 +26,7 @@ XXX Maybe but this in? Somethimes it's not smooth and that makes it ugly...
 }
 
 .btn-home {
-	position: absolute;
-	left: 20px;
-	top: 20px;
-}
-@media (min-width: 900px) {
-  .btn-home {
-	top: 20px;
-  }
+	margin-right: 20px;
 }
 
 .button-list-item {
