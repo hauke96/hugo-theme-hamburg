@@ -59,8 +59,8 @@ theme = "hamburg"
 
 [languages]
     [languages.en]
-        languageCode = "en"
-        languageName = "English"
+        locale = "en"
+        label = "English"
         subtitle = "A simple subtitle"
         # Copyright notice. This is displayer in the footer.
         copyright = "&copy; some license"
@@ -70,8 +70,8 @@ theme = "hamburg"
                 identifier = "about"
                 url = "pages/about"
     [languages.de]
-        languageCode = "de"
-        languageName = "Deutsch"
+        locale = "de"
+        label = "Deutsch"
         subtitle = "Ein einfacher Untertitel"
         copyright = "&copy; eine Lizenz"
         [languages.de.menu]
@@ -163,7 +163,7 @@ contact = "mailto:mail@foobar.com"
 bio = "Something about you"
 ```
 
-To support multiple languages, create multiple directories in the `data` directory. So for German as second language (`languageCode` would be `de`) the above example would also have a `data/de/authors/hauke96.toml` file.
+To support multiple languages, create multiple directories in the `data` directory. So for German as second language (`locale` would be `de`) the above example would also have a `data/de/authors/hauke96.toml` file.
 
 ## Tracking
 You can use the above configuration with e.g. Google Analytics or use your own JavaScript snippet to do so.

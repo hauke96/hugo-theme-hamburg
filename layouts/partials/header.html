@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta http-equiv='content-language' content="{{ .Site.LanguageCode }}">
+  <meta http-equiv='content-language' content="{{ .Site.Language.Locale }}">
 
   <!-- Open Graph Protocol entries -->
   <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
@@ -82,7 +82,7 @@
   {{ end }}
 
   <!-- Condition specifically made for pagination to be able to call paginator multiple times (here and in index.html). -->
-  {{ if .Page.IsNode }}
+  {{ if .Page.IsBranch }}
     {{ with $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
       {{ if $paginator.HasPrev }}
         <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />
@@ -143,7 +143,7 @@
         {{ if .IsTranslated }}
           <div class="language-container">
             {{ range .Site.Home.AllTranslations }}
-              <a class="btn btn-default button-list-item" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
+              <a class="btn btn-default button-list-item" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.Label }}</a>
             {{ end }}
           </div>
         {{ end }}
