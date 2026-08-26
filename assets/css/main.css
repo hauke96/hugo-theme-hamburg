@@ -147,6 +147,13 @@ main {
 	overflow-x: scroll;
 	padding-right: 20px;
 	padding-left: 20px;
+
+	/* Otherwise, the element might be above the title (partially) blocking hover and click events */
+	pointer-events: none;
+
+	* {
+		pointer-events: initial;
+	}
 }
 
 .home-lang-wrapper {
