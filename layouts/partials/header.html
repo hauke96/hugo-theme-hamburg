@@ -101,13 +101,13 @@
   {{ end }}
     <section class="header-text">
       <div class="site-title-container">
-        <h1><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
+        <a class="site-title" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
       </div>
 
       {{ with .Site.Params.subtitle }}
-        <h3 class="tag-line">
+        <p class="tag-line">
           {{ . }}
-        </h3>
+        </p>
       {{ end }}
       
       <!-- sites -->
