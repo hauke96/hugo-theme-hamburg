@@ -6,8 +6,14 @@
   <meta http-equiv='content-language' content="{{ .Site.Language.Locale }}">
 
   <!-- Open Graph Protocol entries -->
-  <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
-  <meta property="og:description" content="{{ .Site.Params.Description }}" />
+  <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+  {{ if .Description }}
+    <meta property="og:description" content="{{ .Description }}">
+  {{ else if .IsPage }}
+    <meta property="og:description" content="{{ .Summary | plainify }}">
+  {{ else if .Site.Params.description }}
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+  {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ with .Params.images }}
@@ -36,10 +42,10 @@
   <!-- Description, title, etc. -->
   {{ if .Description }}
     <meta name="description" content="{{ .Description }}">
-  {{ else if .Site.Params.description }}
-    <meta name="description" content="{{ .Site.Params.description }}">
   {{ else if .IsPage }}
     <meta name="description" content="{{ .Summary | plainify }}">
+  {{ else if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}">
   {{ end }}
 
   <title>
