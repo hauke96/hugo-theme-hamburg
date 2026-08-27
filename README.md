@@ -121,6 +121,12 @@ author = "hauke"
 summary = "Dies ist nur ein Testbeitrag um die Website zu testen."
  # This will ensure that the date is not printed
 noshowdate = true
+# The title image used in the article list and meta information of the page
+image: "images/kramerspitz-2024/DSC04504_1600.jpg"
+# Image used in the header area, i.e. on the article page above the content (when "headerImage" is not specified, "images/bg.jpg" will be used)
+headerImage: "images/kramerspitz-2024/DSC04504_1600.jpg"
+# CSS "background-position-y" parameter for the header image to adjust the vertical position (use values like "bottom", "center" or "25%")
+headerImagePositionY: "25%"
 ```
 
 ## Shortcodes

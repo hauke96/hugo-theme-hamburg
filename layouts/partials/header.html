@@ -16,10 +16,10 @@
   {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
-  {{ with .Params.images }}
-    {{ range first 5 . }}
-      <meta property="og:image" content="{{ . | absURL }}" />
-    {{ end }}
+  {{ if isset .Params "image" }}
+    <meta property="og:image" content="{{ .Params.image | absURL }}" />
+  {{ else }}
+    <meta property="og:image" content="{{ "images/bg.jpg" | absURL }}" />
   {{ end }}
   
   {{ if .IsPage }}
@@ -100,11 +100,11 @@
   {{ end }}
 </head>
 <body>
-  {{ if isset .Params "image" }}
-  <header class="global-header"  style="background-image:url({{ .Params.image }})">
-  {{ else }}
-  <header class="global-header"  style="background-image:url({{ "images/bg.jpg" | absURL }})">
-  {{ end }}
+{{ if isset .Params "headerImage" }}
+  <header class="global-header" style="background-image:url({{ .Params.headerImage | absURL }}); background-position-y: {{ .Params.headerImagePositionY }};">
+{{ else }}
+  <header class="global-header" style="background-image:url({{ "images/bg.jpg" | absURL }}); background-position: center;">
+{{ end }}
     <section class="header-text">
       <div class="site-title-container">
         <a class="site-title" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>

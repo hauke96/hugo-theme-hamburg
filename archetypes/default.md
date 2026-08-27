@@ -4,6 +4,8 @@ summary: ""
 date: "{{ .Date }}"
 tags: [""]
 author: ""
-images: []
+image: ""
+headerImage: ""
+headerImagePositionY: ""
 draft = true
 ---
