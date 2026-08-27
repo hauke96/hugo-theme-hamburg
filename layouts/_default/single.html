@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
-{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $data := index hugo.Data .Site.Language.Lang }}
 <article>
   <header class="article-title">
     <h1 class="text-primary">{{ .Title }}</h1>

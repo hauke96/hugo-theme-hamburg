@@ -1,6 +1,6 @@
 <article>
   <header>
-    <h1 class="li-h1"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <h2 class="li-h2"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <div class="clearfix">
       <div class="post-date pull-left">
         <span class="li-small">
@@ -19,11 +19,10 @@
           {{ i18n "readMore" }} <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
-      {{ if (isset .Params "images") }}
+      {{ if (isset .Params "image") }}
         <a href="{{ .Permalink }}">
-          {{ $imageName := (index .Params.images 0)}}
-          {{ $imageDict := partial "getScaledImage.html" (dict "ctx" .Page "imageName" (index .Params.images 0) "newSize" "250x") }}
-		  {{ $scaledImage := $imageDict.scaledImage }}
+          {{ $imageDict := partial "getScaledImage.html" (dict "ctx" .Page "imageName" .Params.image "newSize" "250x") }}
+          {{ $scaledImage := $imageDict.scaledImage }}
 
           <img class="embedded-image" alt="{{ .Title }}" src="{{ $scaledImage.Permalink }}"/>
         </a>

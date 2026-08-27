@@ -1,6 +1,11 @@
 {{ partial "header.html" . }}
 
 <div class="article-list">
+  <header class="article-title">
+    <h1 class="text-primary">{{ i18n "articleListTitle" }}</h1>
+  </header>
+  <hr>
+
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
   {{ range $index, $page := $paginator.Pages }}
     {{ if ne $index 0 }}

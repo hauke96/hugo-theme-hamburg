@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta http-equiv='content-language' content="{{ .Site.LanguageCode }}">
+  <meta http-equiv='content-language' content="{{ .Site.Language.Locale }}">
 
   <!-- Open Graph Protocol entries -->
-  <meta property="og:title" content="{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
-  <meta property="og:description" content="{{ .Site.Params.Description }}" />
+  <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+  {{ if .Description }}
+    <meta property="og:description" content="{{ .Description }}">
+  {{ else if .IsPage }}
+    <meta property="og:description" content="{{ .Summary | plainify }}">
+  {{ else if .Site.Params.description }}
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+  {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
-  {{ with .Params.images }}
-    {{ range first 5 . }}
-      <meta property="og:image" content="{{ . | absURL }}" />
-    {{ end }}
+  {{ if isset .Params "image" }}
+    <meta property="og:image" content="{{ .Params.image | absURL }}" />
+  {{ else }}
+    <meta property="og:image" content="{{ "images/bg.jpg" | absURL }}" />
   {{ end }}
   
   {{ if .IsPage }}
@@ -36,10 +42,10 @@
   <!-- Description, title, etc. -->
   {{ if .Description }}
     <meta name="description" content="{{ .Description }}">
-  {{ else if .Site.Params.description }}
-    <meta name="description" content="{{ .Site.Params.description }}">
   {{ else if .IsPage }}
     <meta name="description" content="{{ .Summary | plainify }}">
+  {{ else if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}">
   {{ end }}
 
   <title>
@@ -82,7 +88,7 @@
   {{ end }}
 
   <!-- Condition specifically made for pagination to be able to call paginator multiple times (here and in index.html). -->
-  {{ if .Page.IsNode }}
+  {{ if .Page.IsBranch }}
     {{ with $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
       {{ if $paginator.HasPrev }}
         <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />
@@ -94,20 +100,20 @@
   {{ end }}
 </head>
 <body>
-  {{ if isset .Params "image" }}
-  <header class="global-header"  style="background-image:url({{ .Params.image }})">
-  {{ else }}
-  <header class="global-header"  style="background-image:url({{ "images/bg.jpg" | absURL }})">
-  {{ end }}
+{{ if isset .Params "headerImage" }}
+  <header class="global-header" style="background-image:url({{ .Params.headerImage | absURL }}); background-position-y: {{ .Params.headerImagePositionY }};">
+{{ else }}
+  <header class="global-header" style="background-image:url({{ "images/bg.jpg" | absURL }}); background-position: center;">
+{{ end }}
     <section class="header-text">
       <div class="site-title-container">
-        <h1><a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></h1>
+        <a class="site-title" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
       </div>
 
       {{ with .Site.Params.subtitle }}
-        <h3 class="tag-line">
+        <p class="tag-line">
           {{ . }}
-        </h3>
+        </p>
       {{ end }}
       
       <!-- sites -->
@@ -143,7 +149,7 @@
         {{ if .IsTranslated }}
           <div class="language-container">
             {{ range .Site.Home.AllTranslations }}
-              <a class="btn btn-default button-list-item" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.LanguageName }}</a>
+              <a class="btn btn-default button-list-item" href="{{ .Permalink }}{{ strings.TrimPrefix "/" $path }}">{{ .Language.Label }}</a>
             {{ end }}
           </div>
         {{ end }}

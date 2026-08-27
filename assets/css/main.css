@@ -45,19 +45,20 @@ main {
 	max-width: 430px;
 	text-align: center;
 	font-weight: 200;
+	line-height: 1.1;
+	font-size: 24px;
 }
 
-.header-text h1 {
+.header-text .site-title {
 	padding-bottom: 25px;
+	margin-top: 26px;
 	margin-bottom: 0;
 	text-align: center;
 	font-weight: 100;
 	font-size: 52px;
+	line-height: 1.1;
 	border-bottom: 1px solid;
 	width: 550px;
-}
-
-.header-text h1 a {
 	text-decoration: none;
 }
 
@@ -78,11 +79,11 @@ main {
 		min-height: 200px;
 	}
 
-	.header-text h1 {
+	.header-text .site-title {
 		border-bottom: none;
 	}
 
-	.header-text h1 {
+	.header-text .site-title {
 		margin-top: 10px;
 	}
 }
@@ -112,7 +113,7 @@ main {
 		font-size: 18px;
 	}
 
-	.header-text h1 {
+	.header-text .site-title {
 		padding-bottom: 15px;
 		font-size: 35px;
 		border-bottom: 1px solid;
@@ -147,6 +148,13 @@ main {
 	overflow-x: scroll;
 	padding-right: 20px;
 	padding-left: 20px;
+
+	/* Otherwise, the element might be above the title (partially) blocking hover and click events */
+	pointer-events: none;
+
+	* {
+		pointer-events: initial;
+	}
 }
 
 .home-lang-wrapper {
@@ -217,6 +225,11 @@ main {
 
 .article-list hr {
 	margin-bottom: 0;
+}
+
+.article-list-title {
+	font-size: 44px;
+	text-align: center;
 }
 
 .article-title {
@@ -331,29 +344,29 @@ h1 {
 	font-size: 36px;
 }
 h2 {
-	font-size: 30px;
+	font-size: 36px;
 }
 h3 {
-	font-size: 24px;
+	font-size: 30px;
 }
 h4 {
-	font-size: 18px;
+	font-size: 24px;
 }
 h5 {
-	font-size: 14px;
+	font-size: 18px;
 }
 h6 {
-	font-size: 12px;
+	font-size: 14px;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 	line-height: 1.1;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	margin-top: 26px;
 	margin-bottom: 13px;
 }
-h4, h5, h6 {
+h5, h6 {
 	margin-top: 13px;
 	margin-bottom: 13px;
 }
