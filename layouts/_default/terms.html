@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
 <section class="taxonomy-terms">
-  <h2>{{ .Title }}</h2>
+  <h1>{{ .Title }}</h1>
   <ul>
-	{{ range .Data.Terms.Alphabetical }}
-	  <li>
+    {{ range .Data.Terms.Alphabetical }}
+      <li>
       <a href="{{ .Page.Permalink }}">{{ .Page.Name }}</a> ({{.Count}})
-	  </li>
+      </li>
     {{ end }}
   </ul>
 </section>
